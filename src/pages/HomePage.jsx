@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"
 import Styled from "styled-components";
 
 import bannerBg from "../assets/images/banner_bg.png";
@@ -11,6 +12,7 @@ import { useTranslation, Trans } from 'react-i18next';
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
+  const locale = useLocation();
 
   const langOption = {
     en: {
@@ -60,7 +62,7 @@ const HomePage = () => {
 
   // 获取href 的参数 lang 设置中英文切换
   useEffect(() => {
-    const search = window.location.search
+    const search = locale.search
     if(search) {
       const paramArr = search.split('?')[1].split('&');
       let lang = '';
