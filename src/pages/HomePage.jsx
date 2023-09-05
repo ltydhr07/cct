@@ -44,18 +44,18 @@ const HomePage = () => {
 
   const toGetLink = () => {
     if(langOption[i18n.language]) {
-      window.open(langOption[i18n.language].linkUrl,'_blank')
+      window.open(langOption[i18n.language].linkUrl,'_self')
       return
     }
-    window.open(langOption.en.linkUrl,'_blank')
+    window.open(langOption.en.linkUrl,'_self')
   }
 
   const toChainLink = () => {
     if(langOption[i18n.language]) {
-      window.open(langOption[i18n.language].chainLink,'_blank')
+      window.open(langOption[i18n.language].chainLink,'_self')
       return
     }
-    window.open(langOption.en.chainLink,'_blank')
+    window.open(langOption.en.chainLink,'_self')
   }
 
   // 获取href 的参数 lang 设置中英文切换
@@ -89,41 +89,41 @@ const HomePage = () => {
         </div>
         <img className="sm:w-[456px] sm:h-[330px] sm:ml-[150px]" src={bannerRImg} />
       </div>
-      <div className="card w-[95%] sm:w-full sm:-mt-[72px] -mt-12">
+      <div className="card w-[95%] sm:w-full sm:-mt-[72px] -mt-8">
         <div className="title">CTT Token</div>
         <div className="line"></div>
         <div className="w-full sm:text-center text-left grid sm:grid-cols-3 grid-cols-1">
           <div className="token-item">
             <div className="flex sm:flex-col items-center justify-between">
               <div className="label">{t('card1.label1')}</div>
-              <div className="name text-lg sm:text-2xl sm:mt-3 mt-0">CITEX Token</div>
+              <div className="name text-sm sm:text-2xl sm:mt-3 mt-0">CITEX Token</div>
             </div>
             <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
               <div className="label">{t('card1.label2')}</div>
-              <div className="count text-lg sm:text-2xl sm:mt-3 mt-0">250,000,000 CTT</div>
+              <div className="count text-sm sm:text-2xl sm:mt-3 mt-0">250,000,000 CTT</div>
           </div>
           </div>
           <div className="token-item">
           <div className="flex sm:flex-col items-center justify-between sm:mt-0 mt-4">
 
             <div className="label">{t('token.symbol')}</div>
-            <div className="name text-lg sm:text-2xl sm:mt-3 mt-0">CTT</div>
+            <div className="name text-sm sm:text-2xl sm:mt-3 mt-0">CTT</div>
             </div>
             <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
 
             <div className="label">{t('token.totalCirculate')}</div>
-            <div className="count text-lg sm:text-2xl sm:mt-3 mt-0">171,105,893.29 CTT</div>
+            <div className="count text-sm sm:text-2xl sm:mt-3 mt-0">171,105,893.29 CTT</div>
           </div>
           </div>
           <div className="token-item">
           <div className="flex sm:flex-col items-center justify-between sm:mt-0 mt-4">
 
             <div className="label">{t('token.chain')}</div>
-            <div className="name text-lg sm:text-2xl sm:mt-3 mt-0">BNB Smart Chain（BEP20）</div>
+            <div className="name text-sm sm:text-2xl sm:mt-3 mt-0">BNB Smart Chain(BEP20)</div>
             </div>
             <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="label">{t('token.totalNot')}</div>
-            <div className="count text-lg sm:text-2xl sm:mt-3 mt-0">78,894,106.71 CTT</div>
+            <div className="count text-sm sm:text-2xl sm:mt-3 mt-0">78,894,106.71 CTT</div>
           </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ const HomePage = () => {
       <div className="card w-[95%] sm:w-full s3 mt-[43px]">
         <div className="title sm:text-[32px] text-2xl">{t('handleTable.title')}</div>
         <div className="box-wrap flex flex-wrap w-full sm:mt-[60px] mt-4 mb-[20px] text-left">
-          <div className="box-item flex flex-col-reverse  sm:flex-row sm:w-1/2 w-full pr-[55px]">
+          <div className="box-item flex flex-col-reverse  sm:flex-row sm:w-1/2 w-full sm:pr-[55px]">
             <img className="w-[189px] h-[150px] sm:mr-[38px] mx-auto mt-6 sm:mt-0" src={img1} />
             <div className="flex flex-col items-start justify-center ">
               <div className="sm:text-[24px] text-[20px] text-[#0D0E0F]">{t('handleTable.d1')}</div>
@@ -166,7 +166,7 @@ const HomePage = () => {
           <div className="box-item flex flex-col-reverse sm:flex-row sm:w-1/2 w-full border-[#E2E5E7] border-t sm:border-t-0 sm:border-l mt-8 sm:mt-0 pt-6 sm:pt-0">
             <img className="pl-[75px] w-[206px] h-[150px] mr-[72px]" src={img2} />
             <div className="flex flex-col items-start sm:justify-center justify-start">
-              <div className="w-[243px] sm:text-[24px] text-[20px] text-[#0D0E0F]">{t('handleTable.d4')}</div>
+              <div className="w-full sm:w-[243px] sm:text-[24px] text-[20px] text-[#0D0E0F]">{t('handleTable.d4')}</div>
             </div>
           </div>
         </div>
@@ -174,12 +174,12 @@ const HomePage = () => {
       <div className="s4 w-[95%] sm:w-full grid grid-cols-1 sm:grid-cols-2 gap-[40px] mt-[40px]">
         <div className="card">
           <div className="title sm:text-[32px] text-2xl">{t('handleTable.otherTitle')}</div>
-          <div className="flex sm:flex-row flex-col-reverse sm:items-center items-start mt-8 sm:mt-0 w-full h-[288px] sm:h-[272px]">
+          <div className="flex sm:flex-row flex-col-reverse sm:items-center items-start mt-8 sm:mt-0 w-full h-auto sm:h-[272px]">
             <img className="w-[220px] h-[160px] mx-auto mt-4 sm:mt-0 sm:ml-0 sm:mr-[40px]" src={img3} />
             <div className="flex flex-col items-start sm:justify-center justify-start">
               <div className="text-[24px] text-[#0D0E0F]">{t('handleTable.od1')}</div>
               <div className="text-[20px] text-[#87909F]">{t('handleTable.planning')}</div>
-              <div className="w-[205px] text-[20px] text-[#87909F]">{t('handleTable.od2')}</div>
+              <div className="w-full sm:w-[205px] text-[20px] text-[#87909F]">{t('handleTable.od2')}</div>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ const StyledWapper = Styled.div`
       align-items: center;
       justify-content: center;
       width: 100%;
-      background: url(${bannerBg}) no-repeat center/cover;
+      background: url(${bannerBg}) no-repeat center/100% 100%;
       .left-wrap {
         width: 600px;
         text-align: left;
@@ -332,7 +332,7 @@ const StyledWapper = Styled.div`
         font-family: HarmonyOS Sans SC;
         font-size: 14px;
         font-weight: normal;
-        line-height: 100%;
+        line-height: 110%;
         text-align: center;
         letter-spacing: 0em;
         
