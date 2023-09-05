@@ -173,9 +173,9 @@ const HomePage = () => {
           </div>
         </div>
         <div className="card p-[20px] sm:p-[30px]">
-          <div className="title text-[18px] sm:text-[32px]">{t('handleTable.howTitle')}</div>
-          <div className="flex sm:flex-row flex-col-reverse sm:items-center w-full h-[256px] sm:h-[272px]">
-            <img className="w-[248px] h-[180px] mx-auto mt-4 sm:mt-0 sm:ml-0 sm:mr-[50px]" src={img4} />
+          <div className="title text-[18px] sm:text-[32px] mb-[18px]">{t('handleTable.howTitle')}</div>
+          <div className="flex sm:flex-row flex-col-reverse sm:items-center w-full sm:h-[272px]">
+            <img className="w-[248px] h-[180px] mx-auto mt-11 sm:mt-0 sm:ml-0 sm:mr-[50px]" src={img4} />
             <div className="w-[160px] sm:w-[129px] h-[48px] sm:h-[39px] sm:text-xl text-[14px] font-bold bg-[#186CFC] text-white rounded-lg  flex items-center justify-center" onClick={() => toGetLink()}>{t('button.getIt')}</div>
           </div>
         </div>
