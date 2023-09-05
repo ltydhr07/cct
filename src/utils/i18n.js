@@ -17,7 +17,7 @@ i18n
                 header: {
                     title: "CTT Zone",
                     subtitle:
-                        "CITEX Token (CTT) is the only token on the CITEX exchange. CITEX continues to enrich CTT's coin holding rights, expand CTT application scenarios, and safeguard and enhance the value of CTT.",
+                        "CITEX Token (CTT) is the only token on the CITEX exchange. CITEX continues to enrich CTT coin holding rights, expand CTT application scenarios, and safeguard and enhance the value of CTT.",
                 },
                 card1: {
                     label1: "Token Name",
@@ -38,7 +38,7 @@ i18n
                 release: {
                     title:"CTT release",
                     desc: "The unreleased amount of CTT Token is released over 10 years; 7889410.671 CTT is released annually, of which 5000000 CTT is used for liquidity mining and ecological support, and 2889410.671 CTT is part of the CTT technical team.",
-                    toDo: " Release amount：（To be released）",
+                    toDo: " Release amount: (To be released)",
                 },
                 handleTable: {
                     title: "Hold CTT and enjoy more benefits",
@@ -48,8 +48,8 @@ i18n
                     d4:"Hold CTT and share new token rewards for free",
                     otherTitle:"CTT Other Rights",
                     od1:"Enjoy spot trading fee discount",
-                    od2:"More rights are constantly being updated, please pay more attention！",
-                    od3:"Please pay more attention！",
+                    od2:"More rights are constantly being updated, please pay more attention!",
+                    od3:"Please pay more attention!",
                     howTitle:"How to get CTT",
                 },
                 end:{
@@ -62,7 +62,7 @@ i18n
                 header: {
                     title: "CTT专区",
                     subtitle:
-                        "CITEX Token（CTT）是 CITEX 交易平台唯一通证。CITEX通过持续丰富 CTT持币权益，拓展 CTT 应用场景，保障和提升CTT价值。",
+                        "CITEX Token(CTT)是 CITEX 交易平台唯一通证。CITEX通过持续丰富 CTT持币权益，拓展 CTT 应用场景，保障和提升CTT价值。",
                 },
                 card1: {
                     label1: "代币名称",
