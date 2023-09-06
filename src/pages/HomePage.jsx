@@ -65,12 +65,12 @@ const HomePage = () => {
     const search = locale.search
     if(search) {
       const paramArr = search.split('?')[1].split('&');
-      let lang = '';
+      let paramObj = {};
       paramArr.forEach(el => {
-        if(el.indexOf('lang') > -1) {
-          lang = el.split('=')[1];
-        }
+        const [key, val] = el.split('=');
+        paramObj[key] = val
       })
+      const lang = paramObj.lang;
       if(lang && langOption[lang] && langOption[lang].status) {
         i18n.changeLanguage(lang);
         return
