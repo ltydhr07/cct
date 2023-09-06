@@ -4,7 +4,7 @@ import { HomeRoute } from "./routes/routes";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-y-auto">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeRoute />} />
