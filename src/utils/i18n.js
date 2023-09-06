@@ -51,7 +51,7 @@ i18n
                     od2:"More rights are constantly being updated, please pay more attention!",
                     od3:"Please pay more attention!",
                     howTitle:"How to get CTT",
-                    hd1: 'Go to trade CTT/USDT pair'
+                    hd1: 'Go to CTT/USDT Trading Pair'
                 },
                 end:{
                     title:"CITEX invites you to create a healthy, safe, and reliable CTT ecology together",
