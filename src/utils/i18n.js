@@ -51,6 +51,7 @@ i18n
                     od2:"More rights are constantly being updated, please pay more attention!",
                     od3:"Please pay more attention!",
                     howTitle:"How to get CTT",
+                    hd1: 'Go to trade CTT/USDT pair'
                 },
                 end:{
                     title:"CITEX invites you to create a healthy, safe, and reliable CTT ecology together",
@@ -96,6 +97,7 @@ i18n
                     od2:"更多权益持续更新中,请持续关注！",
                     od3:"请持续关注！",
                     howTitle:"如何获得CTT",
+                    hd1: '前往CTT/USDT交易对交易'
                 },
                 end:{
                     title:"CITEX邀您与我们一起共创健康、安全、可靠的 CTT生态",
