@@ -27,18 +27,30 @@ const HomePage = () => {
       linkUrl: 'https://www.citex.club/zh_CN/trade/CTT_USDT?type=spot',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
-    'zh-tw': {
-      status: false, 
+    tc: {
+      status: true, 
       nativeName: '繁体中文',
       linkUrl: 'https://www.citex.club/zh_TC/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     ko: {
-      status: false, 
+      status: true, 
       nativeName: '韩文',
       linkUrl: 'https://www.citex.io/ko_KR/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
+    id: {
+      status: true, 
+      nativeName: '印尼语',
+      linkUrl: 'https://www.citex.io/en_US/trade/CTT_USDT',
+      chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
+    },
+    vi: {
+      status: true, 
+      nativeName: '越南语',
+      linkUrl: 'https://www.citex.io/en_US/trade/CTT_USDT',
+      chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
+    }
   };
   const yearOption = [
     2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033
