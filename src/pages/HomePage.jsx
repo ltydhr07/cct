@@ -112,20 +112,20 @@ const HomePage = () => {
             <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">CITEX Token</div>
           </div>
           <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
-            <div className="">{t('card1.label2')}</div>
-            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">250,000,000 CTT</div>
-          </div>
-          <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="">{t('token.symbol')}</div>
             <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">CTT</div>
           </div>
           <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
-            <div className="">{t('token.totalCirculate')}</div>
-            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">171,105,893.29 CTT</div>
-          </div>
-          <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="">{t('token.chain')}</div>
             <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">BNB Smart Chain(BEP20)</div>
+          </div>
+          <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
+            <div className="">{t('card1.label2')}</div>
+            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">250,000,000 CTT</div>
+          </div>
+          <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
+            <div className="">{t('token.totalCirculate')}</div>
+            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">171,105,893.29 CTT</div>
           </div>
           <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="">{t('token.totalNot')}</div>
@@ -157,18 +157,19 @@ const HomePage = () => {
       </div>
       <div className="card p-[20px] mt-5 sm:mt-10 sm:p-[40px] s3">
         <div className="title text-[18px] sm:text-[32px]">{t('handleTable.title')}</div>
-        <div className="box-wrap flex flex-wrap w-full sm:mt-[60px] mt-4 sm:mb-[16px] text-left">
-          <div className="box-item flex flex-col-reverse  sm:flex-row sm:w-1/2 w-full sm:pr-[55px]">
-            <img className="w-[165px] sm:w-[225px] mx-auto sm:ml-0 sm:mr-[24px] mt-6 sm:mt-0" src={img1} alt="" />
+        <div className="w-full h-px my-[20px] sm:my-[30px] bg-[#E2E5E7]"></div>
+        <div className="box-wrap flex flex-wrap w-full sm:mb-[16px] text-left">
+          <div className="box-item flex flex-row-reverse sm:flex-row sm:w-1/2 w-full sm:pr-[55px]">
+            <img className="w-[129px] sm:w-[225px] ml-3 sm:ml-0 sm:mr-[24px]" src={img1} alt="" />
             <div className="flex flex-col items-start justify-center">
               <div className="text-sm sm:text-[24px] leading-none text-[#0D0E0F]">{t('handleTable.d1')}</div>
               <div className="mt-2 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.planning')}</div>
               <div className="mt-1 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.d3')}</div>
             </div>
           </div>
-          <div className="box-item flex flex-col-reverse sm:flex-row sm:w-1/2 w-full border-[#E2E5E7] border-t sm:border-t-0 sm:border-l mt-8 sm:mt-0 pt-6 sm:pt-0">
-            <img className="w-[165px] sm:w-[225px] mx-auto sm:ml-0 sm:mr-[24px] mt-6 sm:mt-0" src={img2} alt="" />
-            <div className="flex flex-col items-start sm:justify-center justify-start">
+          <div className="box-item flex flex-row-reverse sm:flex-row sm:w-1/2 w-full border-[#E2E5E7] border-t sm:border-t-0 sm:border-l mt-[30px] sm:mt-0 pt-6 sm:pt-0">
+            <img className="w-[125px] sm:w-[225px] ml-4 sm:ml-0 sm:mr-[24px]" src={img2} alt="" />
+            <div className="flex flex-col items-start justify-center">
               <div className="w-full sm:w-[243px] text-sm sm:text-[24px] leading-none font-medium text-[#0D0E0F]">{t('handleTable.d4')}</div>
             </div>
           </div>
@@ -177,9 +178,9 @@ const HomePage = () => {
       <div className="s4 grid grid-cols-1 sm:grid-cols-2 gap-[20px] sm:gap-[40px] mt-5 sm:mt-10">
         <div className="card p-[24px] sm:p-[30px] sm:pb-0">
           <div className="title text-[18px] sm:text-[32px]">{t('handleTable.otherTitle')}</div>
-          <div className="sm:hidden w-full h-px my-[20px] sm:my-[30px] bg-[#E2E5E7]"></div>
-          <div className="flex sm:flex-row flex-col-reverse sm:items-center items-start w-full h-auto sm:h-[272px]">
-            <img className="w-[249px] sm:w-[220px] mx-auto mt-4 sm:mt-0 sm:ml-0 sm:mr-[40px]" src={img3} />
+          <div className="sm:hidden w-full h-px my-[18px] sm:my-[30px] bg-[#E2E5E7]"></div>
+          <div className="flex sm:flex-row flex-row-reverse sm:items-center items-start w-full h-auto sm:h-[272px]">
+            <img className="w-[129px] sm:w-[220px] ml-8 sm:ml-0 sm:mr-[40px]" src={img3} alt="" />
             <div className="flex flex-col items-start sm:justify-center justify-start">
               <div className="text-sm sm:text-[24px] leading-none text-[#0D0E0F]">{t('handleTable.od1')}</div>
               <div className="mt-2 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.planning')}</div>
@@ -187,11 +188,14 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="card p-[24px] sm:p-[30px] sm:pb-0">
-          <div className="title text-[18px] sm:text-[32px]">{t('handleTable.howTitle')}</div>
-          <div className="flex sm:flex-row flex-col-reverse sm:items-center w-full sm:h-[272px]">
-            <img className="w-[168px] sm:w-[248px] mx-auto mt-[30px] sm:mt-0 sm:ml-0 sm:mr-[50px]" src={img4} />
-            <div className="inline sm:hidden mt-3 text-xs leading-none text-[#87909F]">{t('handleTable.hd1')}</div>
+        <div className="card py-5 px-6 sm:p-[30px] sm:pb-0">
+          <div className="hidden sm:block title text-[18px] sm:text-[32px]">{t('handleTable.howTitle')}</div>
+          <div className="flex sm:flex-row flex-row-reverse justify-between sm:justify-start items-center w-full sm:h-[272px]">
+            <img className="w-[124px] sm:w-[248px] ml-[24px] sm:ml-0 sm:mr-[50px]" src={img4} alt="" />
+            <div className="flex flex-col items-start sm:justify-center justify-start">
+              <div className="block sm:hidden title text-[18px] sm:text-[32px]">{t('handleTable.howTitle')}</div>
+              <div className="inline sm:hidden mt-3 text-xs leading-none text-[#87909F]">{t('handleTable.hd1')}</div>
+            </div>
             <div className="hidden sm:flex items-center justify-center w-[160px] sm:w-[129px] h-[48px] sm:h-[39px] sm:text-xl text-[14px] font-bold bg-[#186CFC] text-white rounded-lg" onClick={() => toGetLink()}>{t('button.getIt')}</div>
           </div>
         </div>
