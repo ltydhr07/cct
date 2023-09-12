@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"
 import Styled from "styled-components";
 
+import logo_pc from "../assets/images/logo_pc.svg";
+import logo_m from "../assets/images/logo_m.svg";
 import bannerBg from "../assets/images/banner_bg.png";
 import bannerRImg from "../assets/images/banner_img.png";
 import img1 from "../assets/images/img1.png";
 import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img3.png";
 import img4 from "../assets/images/img4.png";
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -18,36 +20,42 @@ const HomePage = () => {
     en: {
       status: true, 
       nativeName: 'English',
+      homeLinkUrl: 'https://www.citex.io/en_US',
       linkUrl: 'https://www.citex.io/en_US/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     zh: {
       status: true, 
       nativeName: '中文',
+      homeLinkUrl: 'https://www.citex.club/zh_CN',
       linkUrl: 'https://www.citex.club/zh_CN/trade/CTT_USDT?type=spot',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     tc: {
       status: true, 
       nativeName: '繁体中文',
+      homeLinkUrl: 'https://www.citex.club/zh_TC',
       linkUrl: 'https://www.citex.club/zh_TC/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     ko: {
       status: true, 
       nativeName: '韩文',
+      homeLinkUrl: 'https://www.citex.io/ko_KR',
       linkUrl: 'https://www.citex.io/ko_KR/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     id: {
       status: true, 
       nativeName: '印尼语',
+      homeLinkUrl: 'https://www.citex.io/en_US',
       linkUrl: 'https://www.citex.io/en_US/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     },
     vi: {
       status: true, 
       nativeName: '越南语',
+      homeLinkUrl: 'https://www.citex.io/en_US',
       linkUrl: 'https://www.citex.io/en_US/trade/CTT_USDT',
       chainLink: 'https://bscscan.com/token/0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e',
     }
@@ -62,6 +70,14 @@ const HomePage = () => {
       return
     }
     window.open(langOption.en.linkUrl,'_self')
+  }
+  
+  const toHome = () => {
+    if(langOption[i18n.language]) {
+      window.open(langOption[i18n.language].homeLinkUrl,'_self')
+      return
+    }
+    window.open(langOption.en.homeLinkUrl,'_self')
   }
 
   const toChainLink = () => {
@@ -92,7 +108,11 @@ const HomePage = () => {
   }, [])
 
   return (
-    <StyledWapper className="flex flex-col items-center">
+    <StyledWapper className="flex flex-col items-center pt-[60px] sm:pt-[54px]">
+      <div className="fixed left-0 top-0 flex items-center w-full h-[60px] sm:h-[54px] pl-6 sm:pl-4 bg-white">
+        <img className="hidden sm:block w-[91px] cursor-pointer" src={logo_pc} alt="" onClick={() => toHome()} />
+        <img className="block sm:hidden w-[113px] cursor-pointer" src={logo_m} alt="" onClick={() => toHome()} />
+      </div>
       <div className="banner-wrap flex-wrap sm:h-[490px] sm:block px-6 pt-10 sm:pt-[56px] pb-[38px] sm:pb-[103px]">
         <div className="w-[600px] text-left">
           <div className="sm:text-[48px] text-[22px] font-bold">{t('header.title')}</div>
