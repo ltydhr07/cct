@@ -135,7 +135,7 @@ const HomePage = () => {
         <div className="go-tips flex items-center justify-start sm:justify-center w-full mt-[30px] cursor-pointer text-xs sm:text-[14px]" onClick={() => toChainLink()}>
           <span>{t('token.contract')}: </span>
           <span className="w-[156px] sm:w-auto ml-auto sm:ml-1 break-words">
-          0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e 
+          0x20B65a45d58CedF6c5b62FB2ba019b24A490AD4e
           </span>
           <span className="ml-1">→</span>
         </div>
