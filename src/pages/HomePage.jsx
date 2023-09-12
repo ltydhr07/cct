@@ -111,7 +111,7 @@ const HomePage = () => {
     <StyledWapper className="flex flex-col items-center pt-[60px] sm:pt-[54px]">
       <div className="fixed left-0 top-0 flex items-center w-full h-[60px] sm:h-[54px] pl-6 sm:pl-4 bg-white">
         <img className="hidden sm:block w-[91px] cursor-pointer" src={logo_pc} alt="" onClick={() => toHome()} />
-        <img className="block sm:hidden w-[113px] cursor-pointer" src={logo_m} alt="" onClick={() => toHome()} />
+        <img className="block sm:hidden w-[113px] cursor-pointer" src={logo_m} alt="" />
       </div>
       <div className="banner-wrap flex-wrap sm:h-[490px] sm:block px-6 pt-10 sm:pt-[56px] pb-[38px] sm:pb-[103px]">
         <div className="w-[600px] text-left">
