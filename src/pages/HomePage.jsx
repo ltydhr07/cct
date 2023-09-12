@@ -162,15 +162,15 @@ const HomePage = () => {
           <div className="box-item flex flex-row-reverse sm:flex-row sm:w-1/2 w-full sm:pr-[55px]">
             <img className="w-[129px] sm:w-[225px] ml-3 sm:ml-0 sm:mr-[24px]" src={img1} alt="" />
             <div className="flex flex-col items-start justify-center">
-              <div className="text-sm sm:text-[24px] leading-none text-[#0D0E0F]">{t('handleTable.d1')}</div>
-              <div className="mt-2 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.planning')}</div>
-              <div className="mt-1 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.d3')}</div>
+              <div className="text-sm sm:text-[20px] font-semibold leading-snug text-[#0D0E0F]">{t('handleTable.d1')}</div>
+              <div className="mt-2 sm:mt-5 text-xs sm:text-sm leading-none text-[#87909F]">{t('handleTable.planning')}</div>
+              <div className="mt-1 sm:mt-3 text-xs sm:text-sm leading-none text-[#87909F]">{t('handleTable.d3')}</div>
             </div>
           </div>
           <div className="box-item flex flex-row-reverse sm:flex-row sm:w-1/2 w-full border-[#E2E5E7] border-t sm:border-t-0 sm:border-l mt-[30px] sm:mt-0 pt-6 sm:pt-0">
             <img className="w-[125px] sm:w-[225px] ml-4 sm:ml-0 sm:mr-[24px]" src={img2} alt="" />
             <div className="flex flex-col items-start justify-center">
-              <div className="w-full sm:w-[243px] text-sm sm:text-[24px] leading-none font-medium text-[#0D0E0F]">{t('handleTable.d4')}</div>
+              <div className="w-full sm:w-[243px] text-sm sm:text-[20px] leading-snug font-semibold text-[#0D0E0F]">{t('handleTable.d4')}</div>
             </div>
           </div>
         </div>
@@ -182,9 +182,9 @@ const HomePage = () => {
           <div className="flex sm:flex-row flex-row-reverse sm:items-center items-start w-full h-auto sm:h-[272px]">
             <img className="w-[129px] sm:w-[220px] ml-8 sm:ml-0 sm:mr-[40px]" src={img3} alt="" />
             <div className="flex flex-col items-start sm:justify-center justify-start">
-              <div className="text-sm sm:text-[24px] leading-none text-[#0D0E0F]">{t('handleTable.od1')}</div>
-              <div className="mt-2 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.planning')}</div>
-              <div className="mt-1 text-xs sm:text-[20px] leading-none text-[#87909F]">{t('handleTable.od2')}</div>
+              <div className="text-sm sm:text-[20px] font-semibold leading-none text-[#0D0E0F]">{t('handleTable.od1')}</div>
+              <div className="mt-2 sm:mt-5 text-xs sm:text-sm leading-none text-[#87909F]">{t('handleTable.planning')}</div>
+              <div className="mt-1 sm:mt-3 text-xs sm:text-sm leading-snug text-[#87909F]">{t('handleTable.od2')}</div>
             </div>
           </div>
         </div>
@@ -296,7 +296,7 @@ const StyledWapper = Styled.div`
       .sub-title {
         font-family: HarmonyOS Sans SC;
         font-weight: normal;
-        line-height: 110%;
+        line-height: 1.5;
         text-align: left;
         letter-spacing: 0em;
         
