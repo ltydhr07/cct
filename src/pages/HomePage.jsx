@@ -144,11 +144,11 @@ const HomePage = () => {
           </div>
           <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="">{t('token.totalCirculate')}</div>
-            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">171,105,893.29 CTT</div>
+            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">171,105,893 CTT</div>
           </div>
           <div className="flex sm:flex-col items-center justify-between sm:mt-8 mt-4">
             <div className="">{t('token.totalNot')}</div>
-            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">78,894,106.71 CTT</div>
+            <div className="text-[#0D0E0F] sm:text-2xl font-bold sm:mt-3 mt-0">78,894,107 CTT</div>
           </div>
         </div>
         <div className="go-tips flex items-center justify-start sm:justify-center w-full mt-[30px] cursor-pointer text-xs sm:text-[14px]" onClick={() => toChainLink()}>

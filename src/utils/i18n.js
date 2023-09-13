@@ -37,7 +37,7 @@ i18n
           },
           release: {
             title: "CTT release",
-            desc: "The unreleased amount of CTT Token is released over 10 years; 7889410.671 CTT is released annually, of which 5000000 CTT is used for liquidity mining and ecological support, and 2889410.671 CTT is part of the CTT technical team.",
+            desc: "The unreleased amount of CTT Token is released over 10 years, 7,889,410 CTT is released annually, of which5,000,000 CTT is used for liquidity mining and ecological support, and 2,889,410 CTT is part of the CTT team.",
             toDo: "Release amount: (To be released)",
           },
           handleTable: {
@@ -83,7 +83,7 @@ i18n
           },
           release: {
             title: "CTT释放",
-            desc: "CTT Token未释放量分10年释放；每年释放7,889,410.671 CTT，其中5,000,000 CTT用于流动性挖矿及生态支持，2,889,410.671 CTT为CTT技术团队。",
+            desc: "CTT Token未释放量分10年释放完成；每年释放约7,889,410 CTT，其中5,000,000 CTT用于流动性挖矿及生态支持，2,889,410 CTT为CTT技术团队。",
             toDo: "释放量：（待释放）",
           },
           handleTable: {
@@ -129,7 +129,7 @@ i18n
           },
           release: {
             title: "CTT 릴리스",
-            desc: "10년간 미유통된 CTT는 매년 7,889,410.671 CTT가 유통되며, 이 중 5,000,000 CTT는 유동성 채굴 및 생태 지원을 위해 사용되고 2,889,410.671 CTT는 CTT 기술팀이 보유하게 됩니다.",
+            desc: "10년간 미유통된 CTT는 매년  7,889,410 CTT가 유통되며, 이 중 5,000,000 CTT는 유동성 채굴 및 생태 지원을 위해 사용되고 2,889,410 CTT는 CTT 기술팀이 보유하게 됩니다.",
             toDo: "유통 수량: (대 유통량)",
           },
           handleTable: {
@@ -175,7 +175,7 @@ i18n
           },
           release: {
             title: "Pelepasan CTT",
-            desc: "Jumlah Token CTT yang belum dirilis akan dirilis selama 10 tahun;  7889410.671 CTT dirilis setiap tahun, dimana 5000000 CTT digunakan untuk penambangan likuiditas dan dukungan ekologi, dan 2889410.671 CTT adalah bagian dari tim teknis CTT.",
+            desc: "Jumlah Token CTT yang belum dirilis akan dirilis selama 10 tahun; 7,889,410 CTT dirilis setiap tahun, dimana 5,000,000 CTT digunakan untuk penambangan likuiditas dan dukungan ekologi, dan 2,889,410 CTT adalah bagian dari tim teknis CTT.",
             toDo: "Jumlah rilis: (Akan dirilis)",
           },
           handleTable: {
@@ -221,7 +221,7 @@ i18n
           },
           release: {
             title: "CTT phát hành",
-            desc: "Số lượng CTT Token chưa được phát hành sẽ được phát hành trong 10 năm; 7889410.671 CTT được phát hành hàng năm, trong đó 5000000 CTT được sử dụng để khai thác thanh khoản và hỗ trợ hệ sinh thái, và 2889410.671 CTT là một phần dành cho đội ngũ kỹ thuật của CTT.",
+            desc: "Số lượng CTT Token chưa được phát hành sẽ được phát hành trong 10 năm; 7,889,410 CTT được phát hành hàng năm, trong đó 5,000,000 CTT được sử dụng để khai thác thanh khoản và hỗ trợ hệ sinh thái, và 2,889,410 CTT là một phần dành cho đội ngũ kỹ thuật của CTT.",
             toDo: "Số lượng phát hành: (Đã được phát hành)",
           },
           handleTable: {
@@ -267,7 +267,7 @@ i18n
           },
           release: {
             title: "CTT釋放",
-            desc: "CTT Token未釋放量分10年釋放；每年釋放7,889,410.671 CTT，其中5,000,000 CTT用於流動性挖礦及生態支持，2,889,410.671 CTT為CTT技術團隊。",
+            desc: "CTT Token未釋放量分10年釋放完成；每年釋放約7,889,410 CTT，其中5,000,000 CTT用於流動性挖礦及生態支持，2,889,410 CTT為CTT技術團隊。",
             toDo: "釋放量：（待釋放）",
           },
           handleTable: {
