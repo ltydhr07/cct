@@ -10,6 +10,11 @@ import img1 from "../assets/images/img1.png";
 import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img3.png";
 import img4 from "../assets/images/img4.png";
+
+import regularTTF from "../assets/HARMONYOS_SANS_REGULAR.TTF"
+import boldTTF from "../assets/HARMONYOS_SANS_BOLD.TTF"
+import mediumTTF from "../assets/HARMONYOS_SANS_MEDIUM.TTF"
+
 import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
@@ -229,8 +234,25 @@ const HomePage = () => {
 const StyledWapper = Styled.div`
     width: 100vw;
     text-align: left;
+    @font-face {
+      font-family: "HarmonyOS Sans SC";
+      src: url(${regularTTF});
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "HarmonyOS Sans SC";
+      src: url(${mediumTTF});
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: "HarmonyOS Sans SC";
+      src: url(${boldTTF});
+      font-weight: 700;
+    }
+    
     * {
       box-sizing: border-box;
+      font-family: HarmonyOS Sans SC;
     }
     .btn {
       border-radius: 8px;
