@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "[jsx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "seat.enable": false,
+  "seat.reminderIntervalInMinutes": 60,
+  "commentTranslate.source": "Google",
+  "editor.tabSize": 2,
+  "vue.codeActions.enabled": false
+}
