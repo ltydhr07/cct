@@ -13,5 +13,6 @@
   "seat.reminderIntervalInMinutes": 60,
   "commentTranslate.source": "Google",
   "editor.tabSize": 2,
-  "vue.codeActions.enabled": false
+  "vue.codeActions.enabled": false,
+  "compile-hero.disable-compile-files-on-did-save-code": true
 }
