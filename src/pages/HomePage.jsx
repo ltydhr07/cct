@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"
 import Styled from "styled-components";
-import { Button, DatePicker, Form, Input } from 'antd';
+import { Button, DatePicker, Form, Input, Modal } from 'antd';
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import logoImg from "../assets/images/logo.png";
@@ -31,12 +31,21 @@ const HomePage = () => {
     setMenuActive(index)
     fullpageApi.moveTo(index + 1)
   }
+
+  const [openModal, setOpenModal] = useState(false)
+  
+  const handleOk = () => {
+    setOpenModal(false)
+  }
+
   const onFinish = (values) => {
     console.log('Success:', values);
+    setOpenModal(true)
   };
-
+  
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
+    setOpenModal(true)
   };
 
   return (
@@ -121,14 +130,13 @@ const HomePage = () => {
                         <Form.Item label="First Name" name="name" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="นามสกุล" />
                         </Form.Item>
-                        <Form.Item label="* Phone" name="phone" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="Phone" name="phone" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="เบอร์ติดต่อ" />
                         </Form.Item>
-                        <Form.Item label="* Line / Email" name="email" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="Line / Email" name="email" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="ไลน์/อีเมล" />
-                          <Input />
                         </Form.Item>
-                        <Form.Item label="* ประเภท" name="aa" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="ประเภท" name="aa" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="ประเภท" />
                         </Form.Item>
                         <Form.Item label="Company" name="company" rules={[{ required: true, message: 'Please input!' }]}>
@@ -137,16 +145,16 @@ const HomePage = () => {
                         <Form.Item label="Position" name="position" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="สถานที่ตั้ง" />
                         </Form.Item>
-                        <Form.Item label="* GPS/Address" name="address" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="GPS/Address" name="address" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="พิกัด, ที่อยู่" />
                         </Form.Item>
-                        <Form.Item label="* Elec bill/ month" name="month" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="Elec bill/ month" name="month" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="บิลค่าไฟฟ้า/เดือน" />
                         </Form.Item>
                         <Form.Item label="Kick off date" name="date" rules={[{ required: true, message: 'Please input!' }]}>
                           <DatePicker placeholder="วันที่เริ่มก่อสร้าง" />
                         </Form.Item>
-                        <Form.Item label="* Working hour(วันทำงาน)" name="workHour" rules={[{ required: true, message: 'Please input!' }]}>
+                        <Form.Item label="Working hour(วันทำงาน)" name="workHour" rules={[{ required: true, message: 'Please input!' }]}>
                           <Input placeholder="เวลาทำงาน  " />
                         </Form.Item>
                         <Form.Item className="col-span-2" label="ข้อมูลเพื่อให้เราตอบโจทย์คุณได้มากขึ้น" name="desc" rules={[{ required: true, message: 'Please input!' }]}>
@@ -155,6 +163,12 @@ const HomePage = () => {
                         <Form.Item className="col-span-3">
                           <div className="flex justify-center">
                             <Button className="big-btn" type="primary" htmlType="submit">ส่งข้อมูล</Button>
+                            <Modal centered visible={openModal} footer={null} onCancel={handleOk}>
+                              <div className="flex flex-col items-center py-[55px]">
+                                <div className="text-center text-[#898989] text-[26px]">รับทราบขอขอบคุณสำหรับการส่ง</div>
+                                <Button className="big-btn mt-[60px]" type="primary">ระบุ</Button>
+                              </div>
+                            </Modal>
                           </div>
                         </Form.Item>
                       </div>

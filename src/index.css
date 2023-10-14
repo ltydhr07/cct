@@ -23,6 +23,10 @@ code {
   box-sizing: border-box;
 }
 
+.ant-modal-close-x {
+  font-size: 26px !important;
+}
+
 .ant-form-item-label label {
   color: #222222 !important;
 }
