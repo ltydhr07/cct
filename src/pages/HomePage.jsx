@@ -26,7 +26,10 @@ import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
   const [menuActive, setMenuActive] = useState(0) 
-
+  const handelMenu = (fullpageApi, index) => {
+    setMenuActive(index)
+    fullpageApi.moveTo(index + 1)
+  }
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -47,10 +50,10 @@ const HomePage = () => {
                 <div className="flex items-center w-full max-w-[1310px] h-full">
                   <img className="w-[226px]" src={logoImg}  />
                   <div className="flex items-center h-full ml-auto text-[18px] text-white">
-                    <div onClick={() => setMenuActive(0)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-0 ${menuActive === 0 ? 'border-b-2' : ''}`}>หน้าแรก</div>
-                    <div onClick={() => setMenuActive(1)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === 1 ? 'border-b-2' : ''}`}>Manee Power</div>
-                    <div onClick={() => setMenuActive(2)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === 2 ? 'border-b-2' : ''}`}>บริการของเรา</div>
-                    <div onClick={() => setMenuActive(3)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === 3 ? 'border-b-2' : ''}`}>ติดต่อและลูกค้าสัมพันธ์</div>
+                    <div onClick={() => handelMenu(fullpageApi, 0)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-0 ${menuActive === 0 ? 'border-b-2' : ''}`}>หน้าแรก</div>
+                    <div onClick={() => handelMenu(fullpageApi, 5)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === null ? 'border-b-2' : ''}`}>Manee Power</div>
+                    <div onClick={() => handelMenu(fullpageApi, 4)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === null ? 'border-b-2' : ''}`}>บริการของเรา</div>
+                    <div onClick={() => handelMenu(fullpageApi, 6)} className={`cursor-pointer flex items-center h-full px-2 border-[#22CF68] hover:border-b-2 ml-6 ${menuActive === null ? 'border-b-2' : ''}`}>ติดต่อและลูกค้าสัมพันธ์</div>
                   </div>
                 </div>
               </div>
@@ -231,7 +234,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="section s5">
-              <div className="w-full h-screen flex flex-col items-center">
+              <div className="w-full flex flex-col items-center">
                 <div className="flex flex-col items-center w-full max-w-[1310px] pb-[100px]">
                   <div className="head flex items-center w-full h-[250px]">
                     <div className="left w-1/2 text-center text-[36px] text-[#222222] font-bold">Trust  ผลงานที่ผ่านมา</div>
