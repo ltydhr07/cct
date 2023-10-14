@@ -19,6 +19,7 @@ import imgfImg from "../assets/images/imgf.png";
 import icon1Img from "../assets/images/icon1.png";
 import icon2Img from "../assets/images/icon2.png";
 import icon3Img from "../assets/images/icon3.png";
+import bg1Img from "../assets/images/bg-1.png";
 
 
 
@@ -104,7 +105,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full bg-[#ffCcee] flex flex-col items-center  justify-center px-[10vw]">
+              <div className="w-full form-bg flex flex-col items-center  justify-center px-[10vw]">
                 <div className="flex flex-col items-center w-full max-w-[1310px] py-[58px]">
                   <div className="mb-[60px] text-center text-[#222222] text-[36px]">กรอกข้อมูลเพื่อให้ผู้เชี่ยวชาญดูแล</div>
                     <Form
@@ -327,6 +328,9 @@ const StyledWapper = Styled.div`
   .s6 {}
   .s7 {
     height: auto;
+  }
+  .form-bg {
+    background: url(${bg1Img}) repeat center center;
   }
 `;
 
