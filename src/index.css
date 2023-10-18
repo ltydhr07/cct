@@ -43,11 +43,10 @@ code {
 }
 
 .big-btn {
-  width: 394rem !important;
-  height: 81rem !important;
+  height: 60rem !important;
   background: #22CF68 !important;
   border-color: #22CF68 !important;
-  font-size: 24rem !important;
+  font-size: 18rem !important;
 }
 
 .ant-input,
