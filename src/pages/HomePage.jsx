@@ -18,11 +18,11 @@ import menuIcon from "../assets/images/menu_icon.png";
 import home_img from "../assets/images/home_img.png";
 import toTopImg from "../assets/images/toTop.png";
 
-
-
 import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
+  const { t, i18n } = useTranslation();
+
   const [menuActive, setMenuActive] = useState(0) 
   const handelMenu = (fullpageApi, index) => {
     setMenuActive(index)
@@ -61,9 +61,37 @@ const HomePage = () => {
   useEffect(() => {
     window.addEventListener('resize', resize)
     resize()
+
+    const search = window.location.search
+    if(search) {
+      const paramArr = search.split('?')[1].split('&');
+      let lang = '';
+      paramArr.forEach(el => {
+        if(el.indexOf('lang') > -1) {
+          lang = el.split('=')[1];
+        }
+      })
+      if(lang) {
+        i18n.changeLanguage(lang);
+        return
+      }
+    }
+    i18n.changeLanguage('en');
   }, [])
 
   const [showMenu, setShowMenu] = useState(false)
+  const [showSubMenu, setShowSubMenu] = useState(false)
+
+  useEffect(() => {
+    if(showMenu || showSubMenu) {
+      document.body.onclick = () => {
+        document.body.onclick = () => {
+          setShowMenu(false)
+          setShowSubMenu(false)
+        }
+      }
+    }
+  }, [showMenu, showSubMenu])
 
   return (
     <StyledWapper>
@@ -77,22 +105,46 @@ const HomePage = () => {
              <div className="flex justify-center w-full h-[88rem] bg-[#16243F]">
                 <div className="reactive flex items-center w-full max-w-[1310rem] h-full px-[24rem] py-[8rem] md:p-0">
                   <img id="logo" onClick={() => handelMenu(fullpageApi, 0)} className="w-[226rem]" src={logoImg}  />
-                  <img className="block md:hidden w-[35rem] ml-auto" src={menuIcon} onClick={() => setShowMenu(!showMenu)}  />
+                  <img className="block md:hidden w-[35rem] ml-auto" src={menuIcon} onClick={() => setShowMenu(true)}  />
                   {isPc ? (
                     <div className="flex items-center h-full ml-auto text-[18rem] text-white">
-                      <div onClick={() => handelMenu(fullpageApi, 0)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-0 ${menuActive === 0 ? 'border-b-[2rem]' : ''}`}>Home</div>
-                      <div onClick={() => handelMenu(fullpageApi, 1)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>Service</div>
-                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>Promotion</div>
-                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>Contact US</div>
+                      <div onClick={() => handelMenu(fullpageApi, 0)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-0 ${menuActive === 0 ? 'border-b-[2rem]' : ''}`}>
+                        {t('s1.Home')}
+                      </div>
+                      <div onClick={() => setShowSubMenu(true)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                        {t('s1.Service')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                        {t('s1.Promotion')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                        {t('s1.Contact US')}
+                      </div>
                     </div>
                   ) : (
-                    <div className={`${showMenu ? '' : 'hidden'} absolute top-[94rem] right-[10rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
-                      <div onClick={() => handelMenu(fullpageApi, 0)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>Home</div>
-                      <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>Service</div>
-                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>Promotion</div>
-                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>Contact US</div>
+                    <div className={`${showMenu ? '' : 'hidden'} absolute w-[140rem] top-[94rem] right-[10rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
+                      <div onClick={() => handelMenu(fullpageApi, 0)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
+                        {t('s1.Home')}
+                      </div>
+                      <div onClick={() => setShowSubMenu(true) } className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                        {t('s1.Service')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                        {t('s1.Promotion')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                        {t('s1.Contact US')}
+                      </div>
                     </div>
                   )}
+                  <div className={`${showSubMenu ? '' : 'hidden'} absolute top-[150rem] md:top-[90rem] right-[155rem] md:right-[370rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
+                    <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
+                    {t('s2.t2')}
+                    </div>
+                    <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                    {t('s2.t21')}
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="content-wrap relative w-full">
@@ -101,14 +153,14 @@ const HomePage = () => {
                 <div className="flex justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-60">
                   <div className="flex flex-col justify-center w-full max-w-[1310rem] h-full px-[92rem] md:px-[0]">
                     <div className="w-full max-w-[950px] text-[50rem] text-white">
-                      ใช้ไฟฟ้าฟรี วันนี้ ! solar ลดค่าไฟ 1หมื่น- ล้าน คืนทุนไว 3 ปี กำไร 70% ต่อปี พิเศษ ค่าไฟเกิน 100,000/เดือน ติดตั้งฟรี! สัญญา5 ปี
+                      {t('s1.p1')}
                     </div>
                     <div className="w-full max-w-[950px] mt-[48rem] text-[36rem] md:text-[34rem] text-white">
-                      solar rooftop โรงงาน โรงพยาบาล อาคารสำนักงาน ทาวน์โฮม ตึกแถว <span className="text-[#22CF68]">โชว์รูม โรงเรียน</span>
+                      {t('s1.p2')} <span className="text-[#22CF68]">{t('s1.p21')}</span>
                     </div>
                     <div className="w-[62px] h-[4rem] mt-[48rem] bg-white bg-opacity-30"></div>
                     <div className="w-full max-w-[950px] mt-[45rem] text-[24rem] md:text-[18rem] text-white">
-                    Manee Power จำหน่าย ออกแบบ ติดตั้งโซล่าร์ครบวงจรมาตรฐานสากลทั่วประเทศ ประเมิณแม่นยำ ติดตั้งไว บริการแบบมืออาชีพ ราคามิตรภาพ เราเชื่อว่าทุกคนสามารถผลิตไฟเองได้  “สร้างกำไรแบบมีคุณภาพสู่ความยั่งยืน”
+                      {t('s1.p3')}
                     </div>
                   </div>
                 </div>
@@ -117,8 +169,8 @@ const HomePage = () => {
             <div className="section s21 form-bg">
               <div className="w-full h-screen flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:p-0 px-[68rem]">
-                    <div className="title text-[24rem] font-bold uppercase">Our Services</div>
-                    <div className="title text-[40rem] mt-[30rem] font-bold">Rooftop for home owners</div>
+                    <div className="title text-[24rem] font-bold uppercase">{t('s2.t1')}</div>
+                    <div className="title text-[40rem] mt-[30rem] font-bold">{t('s2.t2')}</div>
                     <div className="w-full mt-[78rem] md:h-[544rem] flex flex-col md:flex-row items-start justify-between">
                       <div className="relative w-full h-full bg-black">
                         <img className="w-full h-full object-fill" src={bg_2Img} alt="" />
@@ -127,7 +179,7 @@ const HomePage = () => {
                         </div>
                       </div>
                       <div className="reactive md:w-[413rem] w-full md:ml-[24rem] mt-[46rem] md:mt-0 flex-shrink-0 flex-grow-0 bg-white">
-                        <div className="head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[36rem] text-white font-bold">Leave us your info</div>
+                        <div className="head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[36rem] text-white font-bold">{t('s2.t3')}</div>
                         <div className="content flex flex-col w-full px-[42rem] py-[24rem]">
                           <Form
                             className="w-full"
@@ -138,21 +190,21 @@ const HomePage = () => {
                             onFinishFailed={onFinishFailed}
                             autoComplete="off"
                           >
-                              <Form.Item label="Name" name="name" rules={[{ required: true, message: 'Please input!' }]}>
-                                <Input placeholder="Press Enter" />
+                              <Form.Item label={t('s2.l1')} name="name" rules={[{ required: true, message: t('s2.p2') }]}>
+                                <Input placeholder={t('s2.p1')} />
                               </Form.Item>
-                              <Form.Item label="Phone" name="phone" rules={[{ required: true, message: 'Please input!' }]}>
-                                <Input placeholder="Press Enter" />
+                              <Form.Item label={t('s2.l2')} name="phone" rules={[{ required: true, message: t('s2.p2') }]}>
+                                <Input placeholder={t('s2.p1')} />
                               </Form.Item>
-                              <Form.Item label="Home Address" name="address" rules={[{ required: true, message: 'Please input!' }]}>
-                                <Input placeholder="Press Enter" />
+                              <Form.Item label={t('s2.l3')} name="address" rules={[{ required: true, message: t('s2.p2') }]}>
+                                <Input placeholder={t('s2.p1')} />
                               </Form.Item>
                               <Form.Item>
-                                <Button className="big-btn w-full" type="primary" htmlType="submit">SUBMIT</Button>
+                                <Button className="big-btn w-full" type="primary" htmlType="submit">{t('submit')}</Button>
                                 <Modal width='unset' wrapClassName="tips-dialog" centered visible={openModal} footer={null} onCancel={handleOk}>
                                   <div className="flex flex-col items-center py-[55rem]">
-                                    <div className="text-center text-[#898989] text-[26rem]">รับทราบขอขอบคุณสำหรับการส่ง</div>
-                                    <Button className="big-btn mt-[60rem]" type="primary">SUBMIT</Button>
+                                    <div className="text-center text-[#898989] text-[26rem]">{t('s2.tip1')}</div>
+                                    <Button className="big-btn mt-[60rem]" type="primary">{t('submit')}</Button>
                                   </div>
                                 </Modal>
                               </Form.Item>
@@ -166,13 +218,24 @@ const HomePage = () => {
             <div className="section s21 bg-white">
               <div className="w-full md:h-screen py-[72rem] flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:p-0 px-[68rem]">
-                    <div className="title text-[24rem] font-bold uppercase">Our Services</div>
-                    <div className="title text-[40rem] mt-[30rem] font-bold">Rooftop for business owners</div>
+                    <div className="title text-[24rem] font-bold uppercase">{t('s2.t1')}</div>
+                    <div className="title text-[40rem] mt-[30rem] font-bold">{t('s2.t21')}</div>
                     <div className="w-full mt-[78rem] flex items-start justify-between">
-                      <div className="relative w-full h-full bg-black">
-                        <img className="w-full h-full object-fill" src={bg_3Img} alt="" />
-                        <div className="absolute left-0 top-0 bg-black bg-opacity-30 w-full h-full flex items-center justify-center text-white md:text-[24rem] md:text-[50rem] font-bold">
-                          XXXXXXXXXXXXXXXXXXXXXXXXX
+                      <div className="relative w-full h-full">
+                        <img className="w-full h-[300rem] md:h-full object-fill" src={bg_3Img} alt="" />
+                        <div className="absolute left-0 top-0 bg-[#16243F] bg-opacity-40 w-full h-full px-[36rem] md:px-[200rem] py-[20rem] md:py-[50rem] flex flex-col items-center font-bold">
+                          <div className="w-full text-[#222222] text-[14rem] md:text-[22rem] text-center">
+                            {t('s21.p1')}
+                          </div>
+                          <div className="w-full pl-[60rem] md:pl-0 mt-[40rem] md:mt-[90rem] text-white text-[18rem] md:text-[28rem] md:text-center">
+                            {t('s21.p2')}
+                          </div>
+                          <ul className="w-full md:w-fit pl-[60rem] md:pl-[140rem] text-white list-disc text-[12rem] md:text-[18rem]">
+                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li1')}</li>
+                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li2')}</li>
+                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li3')}</li>
+                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li4')}</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -181,17 +244,17 @@ const HomePage = () => {
             </div>
             <div className="section s3 form-bg">
               <div className="w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem]">
-                <div className="title text-[40rem] font-bold">Home Owners Solution Pricing</div>
+                <div className="title text-[40rem] font-bold">{t('s3.t1')}</div>
                 <img className="hidden md:block w-full mt-[90rem]" src={dataTableImg} alt="" />
                 <img className="block md:hidden w-[622rem] mt-[48rem]" src={dataTable_mImg} alt="" />
                 <div className="relative flex flex-col-reverse md:flex-row w-full md:h-[518rem] pl-[95rem] pr-[122rem] pb-[35rem] md:p-0 mt-[77rem] md:mt-[282rem] bg-[#16243F]">
                   <img className="md:absolute -top-[95rem] left-[90rem] w-[909rem]" src={home_img} alt="" />
-                  <div className="w-[792rem] pt-[72rem] flex flex-col ml-auto leading-none">
-                    <div className="text-[40rem] md:text-[60rem] text-[#22cf68] font-bold">Promotion</div>
-                    <div className="mt-[15rem] md:mt-[22rem] text-[20rem] md:text-[30rem] text-white">Order now, and get CapFlex Package</div>
+                  <div className="w-full md:w-[792rem] pt-[72rem] flex flex-col ml-auto leading-none">
+                    <div className="text-[40rem] md:text-[60rem] text-[#22cf68] font-bold">{t('s3.t2')}</div>
+                    <div className="mt-[15rem] md:mt-[22rem] text-[20rem] md:text-[30rem] text-white">{t('s3.t3')}</div>
                     <div className="mt-[13rem] md:mt-[20rem] mb-[32rem] md:mb-[48rem] w-[74rem] md:w-[113rem] h-px bg-white"></div>
-                    <div className="w-[283rem] md:w-[443rem] px-[8rem] py-[18rem] md:p-[24rem] bg-[#22cf68] text-[20rem] md:text-[30rem] text-white leading-tight">Only 50% up front and up to 12 months installments</div>
-                    <div className="mt-[28rem] text-[18rem] text-[#22cf68] font-bold uppercase cursor-pointer">subscribe  <span className="inline-block ml-[20rem] h-[28rem] text-[28rem] leading-[18rem]">→</span></div>
+                    <div className="w-[283rem] md:w-[443rem] px-[8rem] py-[18rem] md:p-[24rem] bg-[#22cf68] text-[20rem] md:text-[30rem] text-white leading-tight">{t('s3.p1')}</div>
+                    <div className="mt-[28rem] text-[18rem] text-[#22cf68] font-bold uppercase cursor-pointer">{t('s3.subscribe')}<span className="inline-block ml-[20rem] h-[28rem] text-[28rem] leading-[18rem]">→</span></div>
                   </div>
                 </div>
               </div>
@@ -203,13 +266,13 @@ const HomePage = () => {
                 <div className="flex justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-60">
                   <div className="flex flex-col justify-start md:justify-center w-full max-w-[1310rem] h-full py-[220rem] p-[112rem] md:p-0">
                     <div className="w-full max-w-[950rem] text-[60rem] md:text-[69rem] text-white">
-                      Manee Power
+                      {t('s6.t1')}
                     </div>
                     <div className="w-full max-w-[950rem] mt-[43rem] text-[24rem] text-white">
-                      เราเริ่มต้นธุรกิจด้วยเครื่องตอกเสาเข็มสกรูจากประเทศเยอรมนีสำหรับภาคส่วนโซลาร์ฟาร์ม ก่อตั้งขึ้นในปี 2559 ด้วยทุนจดทะเบียน5 ล้านบาท
+                      {t('s6.p1')}
                     </div>
                     <div className="w-full max-w-[950rem] text-[24rem] text-white">
-                      ตอนนี้ เรากำลังมุ่งเน้นไปที่การเป็นผู้ให้บริการโซลูชั่นพลังงานแสงอาทิตย์เต็มรูปแบบ รวมถึง Solar Rooftop และ Solar Farm, grid-tied หรือระบบแบตเตอรี่ รวมถึงเทคโนโลยีการนำความร้อนกลับมาใช้ใหม่ ตั้งแต่ครัวเรือนขนาดเล็กไปจนถึงอุตสาหกรรมขนาดใหญ่ ผลักดันการใช้พลังงานสะอาดเพื่อสิ่งแวดล้อมที่ดีในสังคมและส่งต่อให้คนรุ่นต่อไป
+                      {t('s6.p2')}
                     </div>
                   </div>
                 </div>
