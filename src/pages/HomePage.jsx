@@ -227,7 +227,7 @@ const HomePage = () => {
                           <div className="w-full text-[#222222] text-[14rem] md:text-[22rem] text-center">
                             {t('s21.p1')}
                           </div>
-                          <div className="w-full pl-[60rem] md:pl-0 mt-[40rem] md:mt-[90rem] text-white text-[18rem] md:text-[28rem] md:text-center">
+                          <div className="w-full pl-[60rem] md:pl-0 mt-[26rem] md:mt-[90rem] text-white text-[18rem] md:text-[28rem] md:text-center">
                             {t('s21.p2')}
                           </div>
                           <ul className="w-full md:w-fit pl-[60rem] md:pl-[140rem] text-white list-disc text-[12rem] md:text-[18rem]">
