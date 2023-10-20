@@ -17,6 +17,11 @@ import bg1Img from "../assets/images/bg-1.png";
 import menuIcon from "../assets/images/menu_icon.png";
 import home_img from "../assets/images/home_img.png";
 import toTopImg from "../assets/images/toTop.png";
+import lineIcon from "../assets/images/lineIcon.png";
+import phoneIcon from "../assets/images/phoneIcon.png";
+import mailIcon from "../assets/images/mailIcon.png";
+import usIcon from "../assets/images/us.png";
+import thIcon from "../assets/images/th.png";
 
 import { useTranslation } from 'react-i18next';
 
@@ -62,20 +67,20 @@ const HomePage = () => {
     window.addEventListener('resize', resize)
     resize()
 
-    const search = window.location.search
-    if(search) {
-      const paramArr = search.split('?')[1].split('&');
-      let lang = '';
-      paramArr.forEach(el => {
-        if(el.indexOf('lang') > -1) {
-          lang = el.split('=')[1];
-        }
-      })
-      if(lang) {
-        i18n.changeLanguage(lang);
-        return
-      }
-    }
+    // const search = window.location.search
+    // if(search) {
+    //   const paramArr = search.split('?')[1].split('&');
+    //   let lang = '';
+    //   paramArr.forEach(el => {
+    //     if(el.indexOf('lang') > -1) {
+    //       lang = el.split('=')[1];
+    //     }
+    //   })
+    //   if(lang) {
+    //     i18n.changeLanguage(lang);
+    //     return
+    //   }
+    // }
     i18n.changeLanguage('en');
   }, [])
 
@@ -105,46 +110,58 @@ const HomePage = () => {
              <div className="flex justify-center w-full h-[88rem] bg-[#16243F]">
                 <div className="reactive flex items-center w-full max-w-[1310rem] h-full px-[24rem] py-[8rem] md:p-0">
                   <img id="logo" onClick={() => handelMenu(fullpageApi, 0)} className="w-[226rem]" src={logoImg}  />
-                  <img className="block md:hidden w-[35rem] ml-auto" src={menuIcon} onClick={() => setShowMenu(true)}  />
+                  <img className="block md:hidden cursor-pointer w-[40rem] ml-auto" src={usIcon} onClick={() => i18n.changeLanguage('en')} alt="" />
+                  <img className="block md:hidden cursor-pointer w-[40rem] mx-[28rem]" src={thIcon} onClick={() => i18n.changeLanguage('th')} alt="" />
+                  <img className="block md:hidden w-[35rem]" src={menuIcon} onClick={() => setShowMenu(true)}  />
                   {isPc ? (
                     <div className="flex items-center h-full ml-auto text-[18rem] text-white">
                       <div onClick={() => handelMenu(fullpageApi, 0)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-0 ${menuActive === 0 ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Home')}
                       </div>
-                      <div onClick={() => setShowSubMenu(true)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                      <div onMouseOver={() => setShowSubMenu(true)} onMouseOut={() => setShowSubMenu(false)} className={`relative cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Service')}
+                        <div className={`${showSubMenu ? '' : 'hidden'} absolute top-[90rem] left-0 w-[180rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
+                          <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
+                          {t('s2.st2')}
+                          </div>
+                          <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          {t('s2.st21')}
+                          </div>
+                        </div>
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                      <div onClick={() => handelMenu(fullpageApi, 4)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Promotion')}
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                      <div onClick={() => handelMenu(fullpageApi, 6)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Contact US')}
                       </div>
+                      <img className="cursor-pointer w-[34rem] ml-[28rem]" onClick={() => i18n.changeLanguage('en')} src={usIcon} alt="" />
+                      <img className="cursor-pointer w-[34rem] ml-[28rem]" onClick={() => i18n.changeLanguage('th')} src={thIcon} alt="" />
                     </div>
                   ) : (
                     <div className={`${showMenu ? '' : 'hidden'} absolute w-[140rem] top-[94rem] right-[10rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
                       <div onClick={() => handelMenu(fullpageApi, 0)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
                         {t('s1.Home')}
                       </div>
-                      <div onClick={() => setShowSubMenu(true) } className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                      <div onClick={() => setShowSubMenu(true) } className={`relative flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                         {t('s1.Service')}
+                        <div className={`${showSubMenu ? '' : 'hidden'} absolute top-0 -left-[180rem] w-[180rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
+                          <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
+                          {t('s2.st2')}
+                          </div>
+                          <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          {t('s2.st21')}
+                          </div>
+                        </div>
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                      <div onClick={() => handelMenu(fullpageApi, 4)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                         {t('s1.Promotion')}
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 5)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                      <div onClick={() => handelMenu(fullpageApi, 6)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                         {t('s1.Contact US')}
                       </div>
                     </div>
                   )}
-                  <div className={`${showSubMenu ? '' : 'hidden'} absolute top-[150rem] md:top-[90rem] right-[155rem] md:right-[370rem] z-10 flex flex-col items-center bg-[#0A162B] p-[6rem] ml-auto text-[18rem] text-white`}>
-                    <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
-                    {t('s2.t2')}
-                    </div>
-                    <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
-                    {t('s2.t21')}
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="content-wrap relative w-full">
@@ -178,7 +195,7 @@ const HomePage = () => {
                           XXXXXXXXXXXXXXXXXXXXXXXXX
                         </div>
                       </div>
-                      <div className="reactive md:w-[413rem] w-full md:ml-[24rem] mt-[46rem] md:mt-0 flex-shrink-0 flex-grow-0 bg-white">
+                      <div className="reactive md:w-[413rem] md:h-[544rem] w-full md:ml-[24rem] mt-[46rem] md:mt-0 flex-shrink-0 flex-grow-0 bg-white">
                         <div className="head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[36rem] text-white font-bold">{t('s2.t3')}</div>
                         <div className="content flex flex-col w-full px-[42rem] py-[24rem]">
                           <Form
@@ -190,13 +207,13 @@ const HomePage = () => {
                             onFinishFailed={onFinishFailed}
                             autoComplete="off"
                           >
-                              <Form.Item label={t('s2.l1')} name="name" rules={[{ required: true, message: t('s2.p2') }]}>
+                              <Form.Item label={'* ' + t('s2.l1')} name="name">
                                 <Input placeholder={t('s2.p1')} />
                               </Form.Item>
-                              <Form.Item label={t('s2.l2')} name="phone" rules={[{ required: true, message: t('s2.p2') }]}>
+                              <Form.Item label={'* ' + t('s2.l2')} name="phone">
                                 <Input placeholder={t('s2.p1')} />
                               </Form.Item>
-                              <Form.Item label={t('s2.l3')} name="address" rules={[{ required: true, message: t('s2.p2') }]}>
+                              <Form.Item label={'* ' + t('s2.l3')} name="address">
                                 <Input placeholder={t('s2.p1')} />
                               </Form.Item>
                               <Form.Item>
@@ -204,7 +221,7 @@ const HomePage = () => {
                                 <Modal width='unset' wrapClassName="tips-dialog" centered visible={openModal} footer={null} onCancel={handleOk}>
                                   <div className="flex flex-col items-center py-[55rem]">
                                     <div className="text-center text-[#898989] text-[26rem]">{t('s2.tip1')}</div>
-                                    <Button className="big-btn mt-[60rem]" type="primary">{t('submit')}</Button>
+                                    <Button className="big-btn w-[200rem] mt-[60rem]" type="primary">{t('ok')}</Button>
                                   </div>
                                 </Modal>
                               </Form.Item>
@@ -220,22 +237,29 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:p-0 px-[68rem]">
                     <div className="title text-[24rem] font-bold uppercase">{t('s2.t1')}</div>
                     <div className="title text-[40rem] mt-[30rem] font-bold">{t('s2.t21')}</div>
-                    <div className="w-full mt-[78rem] flex items-start justify-between">
+                    <div className="w-full mt-[64rem] flex items-start justify-between">
                       <div className="relative w-full h-full">
-                        <img className="w-full h-[300rem] md:h-full object-fill" src={bg_3Img} alt="" />
-                        <div className="absolute left-0 top-0 bg-[#16243F] bg-opacity-40 w-full h-full px-[36rem] md:px-[200rem] py-[20rem] md:py-[50rem] flex flex-col items-center font-bold">
-                          <div className="w-full text-[#222222] text-[14rem] md:text-[22rem] text-center">
-                            {t('s21.p1')}
+                        <img className="w-full h-[490rem] md:h-full object-fill" src={bg_3Img} alt="" />
+                        <div className="absolute left-0 top-0 flex flex-col-reverse md:flex-row justify-start w-full h-full bg-[#16243F] bg-opacity-50">
+                          <div className="flex flex-col flex-shrink-0 flex-grow-0 justify-center w-full md:w-[465rem] h-[177rem] md:h-auto px-[52rem] bg-[#22CF68] bg-opacity-60 text-white font-medium text-[14rem] md:text-[18rem] leading-tight">
+                            <div className="w-full">
+                              {t('s21.p1')}
+                            </div>
+                            <div className="w-full mt-[16rem] md:mt-[50rem]">
+                              {t('s21.p2')}
+                            </div>
                           </div>
-                          <div className="w-full pl-[60rem] md:pl-0 mt-[26rem] md:mt-[90rem] text-white text-[18rem] md:text-[28rem] md:text-center">
-                            {t('s21.p2')}
+                          <div className="flex flex-col w-full h-full justify-center">
+                            <div className="w-full pl-[104rem] md:pl-[70rem] text-white font-bold text-[20rem] md:text-[36rem]">
+                              {t('s21.p3')}
+                            </div>
+                            <ul className="w-full mt-[30rem] md:mt-[48rem] pl-[118rem] md:pl-[90rem] text-white list-disc text-[14rem] md:text-[18rem] font-bold">
+                              <li>{t('s21.li1')}</li>
+                              <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li2')}</li>
+                              <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li3')}</li>
+                              <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li4')}</li>
+                            </ul>
                           </div>
-                          <ul className="w-full md:w-fit pl-[60rem] md:pl-[140rem] text-white list-disc text-[12rem] md:text-[18rem]">
-                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li1')}</li>
-                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li2')}</li>
-                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li3')}</li>
-                            <li className="mt-[8rem] md:mt-[14rem]">{t('s21.li4')}</li>
-                          </ul>
                         </div>
                       </div>
                     </div>
@@ -243,11 +267,15 @@ const HomePage = () => {
               </div>
             </div>
             <div className="section s3 form-bg">
-              <div className="w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem]">
+              <div className="w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem] md:pb-[152rem]">
                 <div className="title text-[40rem] font-bold">{t('s3.t1')}</div>
                 <img className="hidden md:block w-full mt-[90rem]" src={dataTableImg} alt="" />
                 <img className="block md:hidden w-[622rem] mt-[48rem]" src={dataTable_mImg} alt="" />
-                <div className="relative flex flex-col-reverse md:flex-row w-full md:h-[518rem] pl-[95rem] pr-[122rem] pb-[35rem] md:p-0 mt-[77rem] md:mt-[282rem] bg-[#16243F]">
+              </div>
+            </div>
+            <div className="section s3 form-bg">
+              <div className="w-full flex flex-col items-center justify-center">
+                <div className="relative flex flex-col-reverse md:flex-row w-full md:h-[518rem] pl-[95rem] pr-[122rem] pb-[35rem] md:p-0 mt-[27rem] md:mt-[100rem] bg-[#16243F]">
                   <img className="md:absolute -top-[95rem] left-[90rem] w-[909rem]" src={home_img} alt="" />
                   <div className="w-full md:w-[792rem] pt-[72rem] flex flex-col ml-auto leading-none">
                     <div className="text-[40rem] md:text-[60rem] text-[#22cf68] font-bold">{t('s3.t2')}</div>
@@ -282,23 +310,30 @@ const HomePage = () => {
               <div className="w-full flex flex-col items-center justify-center p-[50rem]">
                 <div className="flex flex-col w-full max-w-[1310rem]">
                   <div className="text-white text-[48rem] md:text-[40rem]">ติดต่อเรา</div>
-                  <div className="flex justify-between mt-[54rem] md:mt-[24rem]">
-                    <div className="flex flex-col max-w-[50%] text-[#8c8f94] font-bold">
-                      <div className="title text-[26rem] md:text-[24rem] text-white">Opportunity-การจ้างงาน </div>
-                      <div className="flex items-center mt-[34rem] md:mt-[24rem] text-[20rem] md:text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[260rem]">หัวหน้าบัญชี</div><div>1</div></div>
-                      <div className="flex items-center mt-[16rem] md:mt-[16rem] text-[20rem] md:text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[260rem]">ธุรการโครงการ</div><div>1</div></div>
-                      <div className="flex items-center mt-[16rem] md:mt-[16rem] text-[20rem] md:text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[260rem]">Business development</div><div>1</div></div>
-                      <div className="flex items-center mt-[16rem] md:mt-[16rem] text-[20rem] md:text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[260rem]">sale manager</div><div>1</div></div>
-                      <div className="flex items-center mt-[16rem] md:mt-[16rem] text-[20rem] md:text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[260rem]">Design Engineer</div><div>2</div></div>
-                      <div className="flex flex-col w-[90%] md:w-full text-[#ffffff] md:text-[#8c8f94] mt-[50rem] md:mt-[16rem] text-[18rem] md:text-[14rem] font-normal"><div className="label">หากต้องการสมัครงานกับเรา กรุณาส่งจดหมายสมัครงานพร้อมประวัติของคุณมาที่: </div><div>achiraya.ch@maneepower.com  โทร 088-269-4245</div></div>
-                    </div>
-                    <div className="flex flex-col max-w-[50%] text-[#8c8f94] font-bold">
-                      <div className="title text-[26rem] md:text-[24rem] text-white">สำนักงานใหญ่</div>
-                      <div className="flex flex-col mt-[24rem] text-[20rem] md:text-[14rem] font-normal">263 ซ.เพชรเกษม 84 แขวงบางแคเหนือ เขตบางแค กรุงเทพมหานคร 10160</div>
-                      <div className="title mt-[40rem] md:mt-[24rem] text-[26rem] md:text-[24rem] text-white">ติดต่อ ฝ่ายขาย</div>
-                      <div className="flex items-start md:items-center mt-[24rem] text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[160rem]">Tel:</div><div className="flex flex-col md:flex-row"><div>094-942-5936 (แอม),</div><div>088-985-2324(ปิง)</div></div></div>
-                      <div className="flex items-start mt-[16rem] text-[18rem]"><div className="label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[160rem]">Email:</div><div className="flex flex-col"><div>Chatsuda.ch@maneepower.com</div><div>Mahaphon.ch@maneepower.com</div></div></div>
-                      <div className="flex flex-col mt-[16rem] text-[22rem] md:text-[14rem] font-normal">ติดต่อ ฝ่ายจัดซื้อ เสนออุปกรณ์ 096-995-5368</div>
+                  <div className="flex justify-between mt-[32rem] md:mt-[24rem]">
+                    <div className="flex flex-row-reverse w-full text-[#8c8f94] font-bold">
+                      <div className="flex flex-col w-full">
+                        <div className="title text-[26rem] md:text-[24rem] text-white">สำนักงานใหญ่</div>
+                        <div className="flex flex-col mt-[24rem] text-[20rem] md:text-[14rem] font-normal">263 ซ.เพชรเกษม 84 แขวงบางแคเหนือ เขตบางแค กรุงเทพมหานคร 10160</div>
+                      </div>
+                      <div className="flex flex-col w-full ml-[20rem]">
+                        <div className="title text-[26rem] md:text-[24rem] text-white">ติดต่อ ฝ่ายขาย</div>
+                        <div className="flex items-center md:items-center mt-[24rem] text-[16rem]">
+                          <div className="label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]">LINE:</div>
+                          <img className="w-[17rem] mr-[22rem]" src={lineIcon} alt="" />
+                          <div className="flex flex-col md:flex-row">@capsolar </div>
+                        </div>
+                        <div className="flex items-center mt-[16rem] text-[16rem]">
+                          <div className="label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]">Phone:</div>
+                          <img className="w-[17rem] mr-[22rem]" src={phoneIcon} alt="" />
+                          <div className="flex flex-col">081-935-9114</div>
+                        </div>
+                        <div className="flex items-center mt-[16rem] text-[16rem]">
+                          <div className="label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]">Mail:</div>
+                          <img className="w-[17rem] mr-[22rem]" src={mailIcon} alt="" />
+                          <div className="flex flex-col">sales@capsolar.homes</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

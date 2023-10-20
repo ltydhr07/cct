@@ -15,6 +15,7 @@ i18n
       en: {
         translation: {
           submit: 'SUBMIT',
+          ok: 'OK',
           s1: {
             Home: 'Home',
             Service: 'Service',
@@ -28,7 +29,9 @@ i18n
           s2: {
             t1: 'Our Services',
             t2: 'Rooftop for home owners',
+            st2: 'Home Owners',
             t21: 'Rooftop for business owners',
+            st21: 'Business Owners',
             t3: 'Leave us your info',
             l1: 'Name',
             l2: 'Phone',
@@ -38,8 +41,9 @@ i18n
             tip1: 'รับทราบขอขอบคุณสำหรับการส่ง',
           },
           s21: {
-            p1: 'Solar Rooftop for business owners is suitable for all businesses who has electric bill over 100,000 Baht per month or more.  Businesses in factory, hotel, resort, hospital, school, and office building can lower its electricity costs up to 75%.',
-            p2: 'Why CapSolar is right for business owner',
+            p1: 'Solar Rooftop for business owners is suitable for all businesses who has electric bill over 100,000 Baht per month or more.',
+            p2: 'Businesses in factory, hotel, resort, hospital, school, and office building can lower its electricity costs up to 75%.',
+            p3: 'Why CapSolar is right for business owner',
             li1: 'Lower electric bill in the first day of installing solar rooftop',
             li2: 'Good after sales service over solar rooftop lifetime usage.',
             li3: 'Professional and experience installation team.',
@@ -53,15 +57,16 @@ i18n
             subscribe: 'subscribe',
           },
           s6: {
-            t1: 'Manee Power',
-            p1: 'เราเริ่มต้นธุรกิจด้วยเครื่องตอกเสาเข็มสกรูจากประเทศเยอรมนีสำหรับภาคส่วนโซลาร์ฟาร์ม ก่อตั้งขึ้นในปี 2559 ด้วยทุนจดทะเบียน5 ล้านบาท',
-            p2: 'ตอนนี้ เรากำลังมุ่งเน้นไปที่การเป็นผู้ให้บริการโซลูชั่นพลังงานแสงอาทิตย์เต็มรูปแบบ รวมถึง Solar Rooftop และ Solar Farm, grid-tied หรือระบบแบตเตอรี่ รวมถึงเทคโนโลยีการนำความร้อนกลับมาใช้ใหม่ ตั้งแต่ครัวเรือนขนาดเล็กไปจนถึงอุตสาหกรรมขนาดใหญ่ ผลักดันการใช้พลังงานสะอาดเพื่อสิ่งแวดล้อมที่ดีในสังคมและส่งต่อให้คนรุ่นต่อไป',
+            t1: 'Cap Solar',
+            p1: 'CapSolar is a total renewable energy solutions company that focuses on solar rooftop, and floating solar in residential and commercial and industrial segments.   We provide survey, design, installation, maintenance of solar rooftop.',
+            p2: 'Our main goal is to make solar rooftop accessible to all segments of customers, from customers who are price conscious to those who want premium products and services.',
           },
         },
       },
       th: {
         translation: {
           submit: 'SUBMIT',
+          ok: 'OK',
           s1: {
             Home: 'Home',
             Service: 'Service',
@@ -85,8 +90,9 @@ i18n
             tip1: 'รับทราบขอขอบคุณสำหรับการส่ง',
           },
           s21: {
-            p1: 'โซล่าร์ รูฟท็อป สำหรับผู้ประกอบการ เหมาะสำหรับผู้ประกอบการที่ความต้องการการใช้ไฟฟ้าเยอะ มากกว่าหนึ่งแสนบาทต่อเดือน สำหรับลูกค้าที่อยู่ในกลุ่มโรงงานอุตสาหกรรม โรงแรม รีสอร์ท โรงพยาบาล โรงเรียน อาคารสำนักงาน การติดตั้งโซล่าร์ รูฟท็อป ช่วยลดต้นทุนพลังงานได้มากถึง 75%',
-            p2: 'ทำไม CapSolar เหมาะสมกับผู้ประกอบการ',
+            p1: 'โซล่าร์ รูฟท็อป สำหรับผู้ประกอบการ เหมาะสำหรับผู้ประกอบการที่ความต้องการการใช้ไฟฟ้าเยอะ มากกว่าหนึ่งแสนบาทต่อเดือน สำหรับลูกค้',
+            p2: 'าที่อยู่ในกลุ่มโรงงานอุตสาหกรรม โรงแรม รีสอร์ท โรงพยาบาล โรงเรียน อาคารสำนักงาน การติดตั้งโซล่าร์ รูฟท็อป ช่วยลดต้นทุนพลังงานได้มากถึง 75%',
+            p3: 'ทำไม CapSolar เหมาะสมกับผู้ประกอบการ',
             li1: 'ลดต้นทุนด้านพลังงานได้ตั้งแต่วันแรกที่ติดตั้ง',
             li2: 'ดูแลหลังการขายตลอดอายุการใช้งานของ โซล่าร์ รูฟท็อป',
             li3: 'ทีมงานมีความเป็นมืออาชีพ มีมาตรฐานรับรอง',
@@ -100,7 +106,7 @@ i18n
             subscribe: 'subscribe',
           },
           s6: {
-            t1: 'Manee Power',
+            t1: 'Cap Solar',
             p1: 'เราเริ่มต้นธุรกิจด้วยเครื่องตอกเสาเข็มสกรูจากประเทศเยอรมนีสำหรับภาคส่วนโซลาร์ฟาร์ม ก่อตั้งขึ้นในปี 2559 ด้วยทุนจดทะเบียน5 ล้านบาท',
             p2: 'ตอนนี้ เรากำลังมุ่งเน้นไปที่การเป็นผู้ให้บริการโซลูชั่นพลังงานแสงอาทิตย์เต็มรูปแบบ รวมถึง Solar Rooftop และ Solar Farm, grid-tied หรือระบบแบตเตอรี่ รวมถึงเทคโนโลยีการนำความร้อนกลับมาใช้ใหม่ ตั้งแต่ครัวเรือนขนาดเล็กไปจนถึงอุตสาหกรรมขนาดใหญ่ ผลักดันการใช้พลังงานสะอาดเพื่อสิ่งแวดล้อมที่ดีในสังคมและส่งต่อให้คนรุ่นต่อไป',
           },

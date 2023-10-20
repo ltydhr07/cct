@@ -42,24 +42,28 @@ code {
   color: #222222 !important;
 }
 
-.big-btn {
-  height: 60rem !important;
+.ant-btn.big-btn {
+  height: 60rem;
+  padding: 4rem 15rem;
   background: #22CF68 !important;
   border-color: #22CF68 !important;
-  font-size: 18rem !important;
+  font-size: 18rem;
 }
 
 .ant-input,
 .ant-picker {
   width: 100%;
-  min-height: 50rem;
+  height: 50rem;
   padding: 10rem 25rem !important;
-  border-radius: 25px !important;
+  border-radius: 25rem !important;
   background: transparent !important;
   border: 2px solid rgba(34, 35, 40, 0.1) !important;
   color: #989898 !important;
   outline: none !important;
 }
+.ant-form-item {
+  margin-bottom: 24rem !important;
+} 
 
 .ant-input:hover {
   background: transparent !important;
