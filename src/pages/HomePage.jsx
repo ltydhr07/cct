@@ -120,7 +120,7 @@ const HomePage = () => {
                     <div className='text-[20rem] md:text-[16rem]'>{t('s1.callMsg')}</div>
                     <div className='flex items-center mt-[6rem] md:mt-[8rem] text-[22rem] md:text-[16rem]'>
                       <img className='w-[21rem] md:w-[17rem] mr-[12rem]' src={phoneWhiteIcon} alt="" />
-                      081-935-9114
+                      {t('phone')}
                     </div>
                   </div>
                   <img className='block md:hidden cursor-pointer w-[40rem] ml-auto' src={usIcon} onClick={() => i18n.changeLanguage('en')} alt='' />
@@ -344,17 +344,17 @@ const HomePage = () => {
                         <div className='flex items-center md:items-center mt-[24rem] text-[16rem]'>
                           <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l1')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={lineIcon} alt='' />
-                          <div className='flex flex-col md:flex-row'>@capsolar </div>
+                          <div className='flex flex-col md:flex-row'>{t('line')}</div>
                         </div>
                         <div className='flex items-center mt-[16rem] text-[16rem]'>
                           <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l2')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={phoneIcon} alt='' />
-                          <div className='flex flex-col'>081-935-9114</div>
+                          <div className='flex flex-col'>{t('phone')}</div>
                         </div>
                         <div className='flex items-center mt-[16rem] text-[16rem]'>
                           <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l3')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={mailIcon} alt='' />
-                          <div className='flex flex-col'>sales@capsolar.homes</div>
+                          <div className='flex flex-col'>{t('mail')}</div>
                         </div>
                       </div>
                     </div>
