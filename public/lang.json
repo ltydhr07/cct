@@ -1,0 +1,144 @@
+{
+  "en": {
+    "translation": {
+      "comingSoon": "COMING SOON",
+      "submit": "SUBMIT",
+      "ok": "OK",
+      "s1": {
+        "Home": "Home",
+        "Service": "Service",
+        "Promotion": "Promotion",
+        "Contact US": "Contact US",
+        "callMsg": "Call now for free survey",
+        "p1": "Free electricity today! Solar reduces electricity costs by 10,000-1 million, payback in 3 years, 70% annual profit. Special offer: Free installation for electricity bills over 100,000/month. 5-year contract.",
+        "p2": "Solar rooftop for factories, hospitals, office buildings, townhomes, and row houses.",
+        "p21": "Showroom, schools",
+        "p3": "Manee Power provides comprehensive solar solutions, including sales, design, and installation of solar systems. We offer accurate assessments, fast installations, professional service, and affordable prices. We believe everyone can generate their own electricity and create sustainable profits."
+      },
+      "s2": {
+        "t1": "Our Services",
+        "t2": "Rooftop for home owners",
+        "st2": "Home Owners",
+        "st21": "Business Owners",
+        "t21": "Rooftop for business owners",
+        "t3": "Leave your message",
+        "l1": "Name",
+        "l2": "Phone",
+        "l3": "Home Address",
+        "p1": "Press Enter",
+        "p2": "Please input!",
+        "tip1": "Thank you for your submission.",
+        "lit": "Why CapSolar is right for Home Owner?",
+        "li1": "World Class Solar System CapSolar offers tier 1 solar panels and leading inverter brands (Huawei, Sungrow, Solar edge, SMA, Growatt).",
+        "li2": "After Sales Services CapSolar offers to replace panels if there is any problem, no need for customers to wait few months for inspections from factory.",
+        "li3": "Easy Access CapSolar offers CapFlex solution where customer pays 50% upfront and up to 12 month installments.",
+        "li4": "Experience Installation team CapSolar has engineers and staffs who has certifications and many years of solar rooftop installation."
+      },
+      "s21": {
+        "p1": "Solar rooftop for business owners is suitable for all businesses with electricity bills over 100,000 Baht per month.",
+        "p2": "Businesses in factories, hotels, resorts, hospitals, schools, and office buildings can reduce their electricity costs by up to 75%.",
+        "lit": "Why CapSolar is right for business owners:",
+        "li1": "Lower electric bill from the first day of installation",
+        "li2": "Good after-sales service throughout the lifetime of the solar system",
+        "li3": "Professional and experienced installation team",
+        "li4": "Eligible customers can enjoy 50% tax benefits on their solar investments."
+      },
+      "s22": {
+        "t1": "ESS Solution",
+        "t2": "EV Charger Solution"
+      },
+      "s3": {
+        "t1": "Home Owners Solution Pricing",
+        "t2": "Promotion",
+        "t3": "Order now, and get CapFlex Package",
+        "p1": "Only 50% upfront payment and up to 12 months installment",
+        "subscribe": "subscribe"
+      },
+      "s6": {
+        "t1": "Cap Solar",
+        "p1": "CapSolar is a total renewable energy solutions company that focuses on solar rooftop and floating solar systems for residential, commercial, and industrial segments. We provide survey, design, installation, and maintenance services for solar rooftop systems.",
+        "p2": "Our main goal is to make solar rooftop accessible to all customers, offering a range of products and services to meet different needs and budgets."
+      },
+      "foot": {
+        "t1": "ติดต่อเรา",
+        "t2": "สำนักงานใหญ่",
+        "t3": "ติดต่อ ฝ่ายขาย",
+        "p1": "263 ซ.เพชรเกษม 84 แขวงบางแคเหนือ เขตบางแค กรุงเทพมหานคร 10160",
+        "l1": "LINE",
+        "l2": "Phone",
+        "l3": "Mail"
+      }
+    }
+  },
+  "th": {
+    "translation": {
+      "comingSoon": "COMING SOON",
+      "submit": "SUBMIT",
+      "ok": "OK",
+      "s1": {
+        "Home": "Home",
+        "Service": "Service",
+        "Promotion": "Promotion",
+        "Contact US": "Contact US",
+        "callMsg": "Call now for free survey",
+        "p1": "Free electricity today! Solar reduces electricity costs by 10,000-1 million, payback in 3 years, 70% annual profit. Special offer: Free installation for electricity bills over 100,000/month. 5-year contract.",
+        "p2": "Solar rooftop for factories, hospitals, office buildings, townhomes, and row houses.",
+        "p21": "Showroom, schools",
+        "p3": "Manee Power provides comprehensive solar solutions, including sales, design, and installation of solar systems. We offer accurate assessments, fast installations, professional service, and affordable prices. We believe everyone can generate their own electricity and create sustainable profits."
+      },
+      "s2": {
+        "t1": "Our Services",
+        "t2": "Rooftop for home owners",
+        "st2": "Home Owners",
+        "st21": "Business Owners",
+        "t21": "Rooftop for business owners",
+        "t3": "Leave your message",
+        "l1": "Name",
+        "l2": "Phone",
+        "l3": "Home Address",
+        "p1": "Press Enter",
+        "p2": "Please input!",
+        "tip1": "Thank you for your submission.",
+        "lit": "Why CapSolar is right for Home Owner?",
+        "li1": "World Class Solar System CapSolar offers tier 1 solar panels and leading inverter brands (Huawei, Sungrow, Solar edge, SMA, Growatt).",
+        "li2": "After Sales Services CapSolar offers to replace panels if there is any problem, no need for customers to wait few months for inspections from factory.",
+        "li3": "Easy Access CapSolar offers CapFlex solution where customer pays 50% upfront and up to 12 month installments.",
+        "li4": "Experience Installation team CapSolar has engineers and staffs who has certifications and many years of solar rooftop installation."
+      },
+      "s21": {
+        "p1": "Solar rooftop for business owners is suitable for all businesses with electricity bills over 100,000 Baht per month.",
+        "p2": "Businesses in factories, hotels, resorts, hospitals, schools, and office buildings can reduce their electricity costs by up to 75%.",
+        "lit": "Why CapSolar is right for business owners:",
+        "li1": "Lower electric bill from the first day of installation",
+        "li2": "Good after-sales service throughout the lifetime of the solar system",
+        "li3": "Professional and experienced installation team",
+        "li4": "Eligible customers can enjoy 50% tax benefits on their solar investments."
+      },
+      "s22": {
+        "t1": "ESS Solution",
+        "t2": "EV Charger Solution"
+      },
+      "s3": {
+        "t1": "Home Owners Solution Pricing",
+        "t2": "Promotion",
+        "t3": "Order now, and get CapFlex Package",
+        "p1": "Only 50% upfront payment and up to 12 months installment",
+        "subscribe": "subscribe"
+      },
+      "s6": {
+        "t1": "Cap Solar",
+        "p1": "CapSolar is a total renewable energy solutions company that focuses on solar rooftop and floating solar systems for residential, commercial, and industrial segments. We provide survey, design, installation, and maintenance services for solar rooftop systems.",
+        "p2": "Our main goal is to make solar rooftop accessible to all customers, offering a range of products and services to meet different needs and budgets."
+      },
+      "foot": {
+        "t1": "ติดต่อเรา",
+        "t2": "สำนักงานใหญ่",
+        "t3": "ติดต่อ ฝ่ายขาย",
+        "p1": "263 ซ.เพชรเกษม 84 แขวงบางแคเหนือ เขตบางแค กรุงเทพมหานคร 10160",
+        "l1": "LINE",
+        "l2": "Phone",
+        "l3": "Mail"
+      }
+    }
+  }
+}

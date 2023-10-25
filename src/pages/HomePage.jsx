@@ -22,6 +22,7 @@ import phoneIcon from '../assets/images/phoneIcon.png'
 import mailIcon from '../assets/images/mailIcon.png'
 import usIcon from '../assets/images/us.png'
 import thIcon from '../assets/images/th.png'
+import phoneWhiteIcon from '../assets/images/phoneWhiteIcon.png'
 
 import bg_4Img from '../assets/images/bg_4.png'
 import bg_5Img from '../assets/images/bg_5.png'
@@ -115,6 +116,13 @@ const HomePage = () => {
               <div className='flex justify-center w-full h-[88rem] bg-[#16243F]'>
                 <div className='reactive flex items-center w-full max-w-[1310rem] h-full px-[24rem] py-[8rem] md:p-0'>
                   <img id='logo' onClick={() => handelMenu(fullpageApi, 0)} className='w-[226rem]' src={logoImg} />
+                  <div className='ml-[33rem] md:ml-[50rem] font-bold text-white leading-none'>
+                    <div className='text-[20rem] md:text-[16rem]'>{t('s1.callMsg')}</div>
+                    <div className='flex items-center mt-[6rem] md:mt-[8rem] text-[22rem] md:text-[16rem]'>
+                      <img className='w-[21rem] md:w-[17rem] mr-[12rem]' src={phoneWhiteIcon} alt="" />
+                      081-935-9114
+                    </div>
+                  </div>
                   <img className='block md:hidden cursor-pointer w-[40rem] ml-auto' src={usIcon} onClick={() => i18n.changeLanguage('en')} alt='' />
                   <img className='block md:hidden cursor-pointer w-[40rem] mx-[28rem]' src={thIcon} onClick={() => i18n.changeLanguage('th')} alt='' />
                   <img className='block md:hidden w-[35rem]' src={menuIcon} onClick={() => setShowMenu(true)} />
@@ -174,8 +182,8 @@ const HomePage = () => {
                 <img className='block md:hidden w-full h-full object-fill' src={bannerBgMImg} alt='' />
                 <div className='flex justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-60'>
                   <div className='flex flex-col justify-center w-full max-w-[1310rem] h-full px-[92rem] md:px-[0]'>
-                    <div className='w-full max-w-[950px] text-[50rem] text-white'>{t('s1.p1')}</div>
-                    <div className='w-full max-w-[950px] mt-[48rem] text-[36rem] md:text-[34rem] text-white'>
+                    <div className='w-full max-w-[950px] text-[50rem] text-white leading-tight'>{t('s1.p1')}</div>
+                    <div className='w-full max-w-[950px] mt-[48rem] text-[36rem] md:text-[34rem] text-white leading-tight'>
                       {t('s1.p2')} <span className='text-[#22CF68]'>{t('s1.p21')}</span>
                     </div>
                     <div className='w-[62px] h-[4rem] mt-[48rem] bg-white bg-opacity-30'></div>
@@ -185,20 +193,15 @@ const HomePage = () => {
               </div>
             </div>
             <div className='section s21 form-bg'>
-              <div className='w-full h-screen flex flex-col items-center justify-center'>
-                <div className='flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:p-0 px-[68rem]'>
-                  <div className='title text-[24rem] font-bold uppercase'>{t('s2.t1')}</div>
-                  <div className='title text-[40rem] mt-[30rem] font-bold'>{t('s2.t2')}</div>
-                  <div className='w-full mt-[78rem] md:h-[544rem] flex flex-col md:flex-row items-start justify-between'>
-                    <div className='relative w-full h-full bg-black'>
-                      <img className='w-full h-full object-fill' src={bg_2Img} alt='' />
-                      {/* <div className="absolute left-0 top-0 bg-black bg-opacity-30 w-full h-full flex items-center justify-center text-white md:text-[22rem] md:text-[32rem] font-bold">
-                          XXXXXXXXXXXXXXXXXXXXXXXXX
-                        </div> */}
-                    </div>
-                    <div className='reactive md:w-[413rem] md:h-[544rem] w-full md:ml-[24rem] mt-[46rem] md:mt-0 flex-shrink-0 flex-grow-0 bg-white'>
-                      <div className='head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[36rem] text-white font-bold'>{t('s2.t3')}</div>
-                      <div className='content flex flex-col w-full px-[42rem] py-[24rem]'>
+              <div className='w-full flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:px-0 md:py-[70rem] py-[54rem] px-[68rem]'>
+                  <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
+                  <div className='title text-[30rem] md:text-[40rem] leading-none mt-[22rem] md:mt-[32rem] font-bold'>{t('s2.t2')}</div>
+                  <div className='grid grid-cols-4 gap-[20rem]  w-full mt-[38rem] md:mt-[64rem]'>
+                    <img className='col-span-4 md:col-span-3 w-full h-full object-fill' src={bg_2Img} alt='' />
+                    <div className='col-span-4 md:col-span-1 bg-white'>
+                      <div className='head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[28rem] text-white font-bold'>{t('s2.t3')}</div>
+                      <div className='content flex flex-col w-full px-[22rem] py-[24rem]'>
                         <Form className='w-full' name='basic' layout={isPc ? 'vertical' : 'horizontal'} initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete='off'>
                           <Form.Item label={t('s2.l1')} name='name'>
                             <Input placeholder={t('s2.p1')} />
@@ -225,33 +228,37 @@ const HomePage = () => {
                         </Form>
                       </div>
                     </div>
+                    <div className='col-span-4 flex flex-col md:flex-row items-center w-full p-[32rem] bg-[#F3FFF8]'>
+                      <div className="w-full md:w-[220rem] md:mr-[48rem] flex-shrink-0 flex-grow-0 font-bold leading-none md:leading-tight text-[#22CF68] text-[28rem] md:text-[32rem]">{t('s2.lit')}</div>
+                      <ul className='w-full text-[#888888] list-disc text-[20rem] md:text-[16rem] leading-none mb-0 mt-[24rem] pl-[24rem] md:pl-0'>
+                        <li>{t('s2.li1')}</li>
+                        <li className='mt-[20rem] md:mt-[12rem]'>{t('s2.li2')}</li>
+                        <li className='mt-[20rem] md:mt-[12rem]'>{t('s2.li3')}</li>
+                        <li className='mt-[20rem] md:mt-[12rem]'>{t('s2.li4')}</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className='section s21 bg-white'>
-              <div className='w-full md:h-screen py-[72rem] flex flex-col items-center justify-center'>
+              <div className='w-full py-[70rem] flex flex-col items-center justify-center'>
                 <div className='flex flex-col items-center justify-center w-full max-w-[1310rem] text-[#222222] md:p-0 px-[68rem]'>
-                  <div className='title text-[24rem] font-bold uppercase'>{t('s2.t1')}</div>
-                  <div className='title text-[40rem] mt-[30rem] font-bold'>{t('s2.t21')}</div>
-                  <div className='flex flex-col flex-shrink-0 flex-grow-0 justify-center w-full md:w-[465rem] h-[177rem] md:h-auto   bg-opacity-60 text-[#888] font-medium text-[14rem] md:text-[18rem] leading-tight'>
-                    <div className='w-full'>{t('s21.p1')}</div>
-                    <div className='w-full mt-[1rem] md:mt-[50rem]'>{t('s21.p2')}</div>
+                  <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
+                  <div className='title text-[30rem] md:text-[40rem] leading-none mt-[22rem] md:mt-[32rem] font-bold'>{t('s2.t21')}</div>
+                  <div className='text-[16rem] text-[#888888] font-bold mt-[42rem] md:mt-[32rem]'>
+                    <div>{t('s21.p1')}</div>
+                    <div>{t('s21.p2')}</div>
                   </div>
-                  <div className='w-full mt-[64rem] flex items-start justify-between'>
-                    <div className='relative w-full h-full'>
-                      <img className='w-full h-[490rem] md:h-full object-fill' src={bg_3Img} alt='' />
-                    </div>
-                  </div>
-
-                  <div className=' left-0 top-0 flex flex-col-reverse md:flex-row justify-start w-full h-full bg-[#F3FFF8] bg-opacity-50'>
-                    <div className='flex flex-col w-full h-full justify-center pt-[4rem]'>
-                      <div className='w-full pl-[104rem] md:pl-[70rem] text-[#22CF68] font-bold text-[20rem] md:text-[36rem]'>{t('s21.p3')}</div>
-                      <ul className='w-full mt-[30rem] md:mt-[48rem] pl-[118rem] md:pl-[90rem] text-[#888888] list-disc text-[14rem] md:text-[18rem] font-bold'>
+                  <img className='w-full mt-[36rem] md:mt-[46rem]' src={bg_3Img} alt='' />
+                  <div className='flex flex-col items-center w-full justify-center py-[56rem] px-[30rem] bg-[#F3FFF8]'>
+                    <div>
+                      <div className='w-full text-[#22CF68] font-bold text-[28rem] md:text-[32rem] leading-none'>{t('s21.lit')}</div>
+                      <ul className='w-full mt-[30rem] md:mt-[64rem] mb-0 pl-[24rem] md:pl-[40rem] text-[#888888] list-disc leading-none text-[20rem] md:text-[18rem]'>
                         <li>{t('s21.li1')}</li>
-                        <li className='mt-[8rem] md:mt-[14rem]'>{t('s21.li2')}</li>
-                        <li className='mt-[8rem] md:mt-[14rem]'>{t('s21.li3')}</li>
-                        <li className='mt-[8rem] md:mt-[14rem]'>{t('s21.li4')}</li>
+                        <li className='mt-[20rem] md:mt-[14rem]'>{t('s21.li2')}</li>
+                        <li className='mt-[20rem] md:mt-[14rem]'>{t('s21.li3')}</li>
+                        <li className='mt-[20rem] md:mt-[14rem]'>{t('s21.li4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -260,28 +267,28 @@ const HomePage = () => {
             </div>
 
             <div className='section s3 form-bg '>
-              <div className='w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem]'>
-                <div className='title text-[24rem] font-bold uppercase'>{t('s2.t1')}</div>
-                <div className='title text-[40rem] mt-[30rem] font-bold'>ESS Solution </div>
+              <div className='w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[72rem] pb-[38rem] md:pb-[62rem]'>
+                <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
+                <div className='title text-[30rem] md:text-[40rem] leading-none mt-[22rem] md:mt-[32rem] font-bold'>{t('s22.t1')}</div>
               </div>
-              {/* TODO */}
-              <div className='relative pb-[120rem]'>
-                <img className='w-[1040rem]  ml-[40%]' src={bg_grid1} alt='' />
-                <img className='w-[1200rem]  absolute top-[50rem] left-[300rem]' src={bg_4Img} alt='' />
-                <div className='greenCard top-[32%] right-[13%] px-[30rem]'>COMING SOON </div>
+              
+              <div className='w-full px-[50rem] md:p-0 relative mb-[52rem]'>
+                <img className='hidden md:block w-[1040rem] ml-[40%]' src={bg_grid1} alt='' />
+                <img className='w-full md:w-[1200rem] md:absolute top-[50rem] left-[300rem]' src={bg_4Img} alt='' />
+                <div className='absolute flex items-center justify-center h-[65rem] md:h-[150rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white inset-y-0 my-auto md:top-[32%] md:inset-y-auto right-[84rem] md:right-[13%] px-[30rem]'>{t('comingSoon')}</div>
               </div>
             </div>
 
             <div className='section s3 '>
-              <div className='w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem]'>
-                <div className='title text-[24rem] font-bold uppercase'>{t('s2.t1')}</div>
-                <div className='title text-[40rem] mt-[30rem] font-bold'>EV Charger Solution </div>
+              <div className='w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[72rem] pb-[38rem] md:pb-[62rem]'>
+                <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
+                <div className='title text-[30rem] md:text-[40rem] leading-none mt-[22rem] md:mt-[32rem] font-bold'>{t('s22.t2')}</div>
               </div>
 
-              <div className='relative pb-[120rem]'>
-                <img className='w-[1040rem]  ml-[20%]' src={bg_grid2} alt='' />
-                <img className='w-[1050rem]  absolute top-[60rem] left-[575rem]' src={bg_5Img} alt='' />
-                <div className='greenCard top-[32%] left-[13%] p-[95rem]'>COMING SOON</div>
+              <div className='w-full px-[50rem] md:p-0 relative mb-[100rem]'>
+                <img className='hidden md:block w-[1040rem] ml-[20%]' src={bg_grid2} alt='' />
+                <img className='w-full md:w-[1050rem] md:absolute top-[60rem] left-[575rem]' src={bg_5Img} alt='' />
+                <div className='absolute inset-y-0 my-auto md:top-[32%] md:bottom-[auto] left-[50rem] md:left-[13%] flex items-center justify-center w-[166rem] md:w-[auto] text-center h-[139rem] md:h-[150rem] px-[30rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white'>{t('comingSoon')}</div>
               </div>
             </div>
             <div className='section s3 form-bg'>
@@ -325,27 +332,27 @@ const HomePage = () => {
             <div className='section s7 bg-[#16243F]'>
               <div className='w-full flex flex-col items-center justify-center p-[50rem]'>
                 <div className='flex flex-col w-full max-w-[1310rem]'>
-                  <div className='text-white text-[48rem] md:text-[40rem]'>ติดต่อเรา</div>
+                  <div className='text-white text-[48rem] md:text-[40rem]'>{t('foot.t1')}</div>
                   <div className='flex justify-between mt-[32rem] md:mt-[24rem]'>
                     <div className='flex flex-row-reverse w-full text-[#8c8f94] font-bold'>
                       <div className='flex flex-col w-full'>
-                        <div className='title text-[26rem] md:text-[24rem] text-white'>สำนักงานใหญ่</div>
-                        <div className='flex flex-col mt-[24rem] text-[20rem] md:text-[14rem] font-normal'>263 ซ.เพชรเกษม 84 แขวงบางแคเหนือ เขตบางแค กรุงเทพมหานคร 10160</div>
+                        <div className='title text-[26rem] md:text-[24rem] text-white'>{t('foot.t2')}</div>
+                        <div className='flex flex-col mt-[24rem] text-[20rem] md:text-[14rem] font-normal'>{t('foot.p1')}</div>
                       </div>
                       <div className='flex flex-col w-full ml-[20rem]'>
-                        <div className='title text-[26rem] md:text-[24rem] text-white'>ติดต่อ ฝ่ายขาย</div>
+                        <div className='title text-[26rem] md:text-[24rem] text-white'>{t('foot.t3')}</div>
                         <div className='flex items-center md:items-center mt-[24rem] text-[16rem]'>
-                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>LINE:</div>
+                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l1')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={lineIcon} alt='' />
                           <div className='flex flex-col md:flex-row'>@capsolar </div>
                         </div>
                         <div className='flex items-center mt-[16rem] text-[16rem]'>
-                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>Phone:</div>
+                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l2')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={phoneIcon} alt='' />
                           <div className='flex flex-col'>081-935-9114</div>
                         </div>
                         <div className='flex items-center mt-[16rem] text-[16rem]'>
-                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>Mail:</div>
+                          <div className='label flex-shrink-0 flex-grow-0 w-[60rem] md:w-[80rem]'>{t('foot.l3')}:</div>
                           <img className='w-[17rem] mr-[22rem]' src={mailIcon} alt='' />
                           <div className='flex flex-col'>sales@capsolar.homes</div>
                         </div>
