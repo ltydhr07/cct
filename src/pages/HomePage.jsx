@@ -53,7 +53,7 @@ const HomePage = () => {
 
   const onFinish = val => {
     var xhr = new XMLHttpRequest()
-    xhr.open('POST', 'http://192.168.1.101/gf/formInfo/createHomeForm', true)
+    xhr.open('POST', 'https://www.capsolar.homes/gf/formInfo/createHomeForm', true)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
       console.log(xhr,xhr.readyState, xhr.status)
