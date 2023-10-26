@@ -43,6 +43,10 @@ const HomePage = () => {
 
   const [openModal, setOpenModal] = useState(false)
 
+  const toPrivacy = () => {
+    window.open('/privacy')
+  }
+  
   const handleOk = () => {
     setOpenModal(false)
   }
@@ -365,9 +369,9 @@ const HomePage = () => {
                       <div className='flex flex-col w-full'>
                         <div className='title text-[26rem] md:text-[24rem] text-white'>{t('foot.t2')}</div>
                         <div className='flex mt-[24rem] text-[20rem] md:text-[14rem] font-normal'>{t('foot.p1')}</div>
-                        <div className='flex items-center cursor-pointer underline mt-[24rem] text-[20rem] md:text-[14rem] font-normal'>
+                        <div onClick={() => toPrivacy()} className='flex items-center cursor-pointer underline mt-[24rem] text-[20rem] md:text-[14rem] font-normal'>
                           <img className='w-[26rem] mr-[8rem]' src={privateIcon} alt="" />
-                          {`<Privacy Agreement>`}
+                          {`<`}{t('Privacy')}{`>`}
                         </div>
                       </div>
                       <div className='flex flex-col w-full ml-[20rem]'>

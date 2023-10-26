@@ -9,4 +9,13 @@ const HomeRoute = () => {
   )
 }
 
-export { HomeRoute }
+const PrivacyPage = React.lazy(() => import('../pages/Privacy'))
+const PrivacyRoute = () => {
+  return (
+    <React.Suspense>
+      <PrivacyPage />
+    </React.Suspense>
+  )
+}
+
+export { HomeRoute, PrivacyRoute }
