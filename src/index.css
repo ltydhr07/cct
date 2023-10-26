@@ -51,13 +51,13 @@ code {
   font-size: 18rem;
 }
 
-.ant-input,
-.ant-picker {
+.ant-form-item .ant-input,
+.ant-form-item .ant-picker {
   width: 100%;
   padding: 10rem 25rem !important;
   /* border-radius: 25rem !important; */
   background: transparent !important;
-  border: 2px solid rgba(34, 35, 40, 0.1) !important;
+  border: 2px solid rgba(34, 35, 40, 0.1);
   color: #989898 !important;
   outline: none !important;
   @apply h-[66rem] md:h-[50rem];
@@ -67,13 +67,17 @@ code {
   margin-bottom: 24rem !important;
 }
 
-.ant-input:hover {
-  background: transparent !important;
+.ant-form-item .ant-input:hover {
+  background: transparent;
+  border-color: rgba(34, 35, 40, 0.3);
+}
+.ant-form-item-with-help .ant-form-item-explain {
+  margin-bottom: -24px;
 }
 
-.ant-input:focus {
-  background: transparent !important;
-  border-color: rgba(34, 35, 40, 0.3) !important;
+.ant-form-item .ant-input:focus {
+  background: transparent;
+  border-color: rgba(34, 35, 40, 0.3);
   box-shadow: none !important;
 }
 
