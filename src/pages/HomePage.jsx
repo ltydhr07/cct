@@ -12,7 +12,9 @@ import bannerBgM1Img from '../assets/images/banner-bg1_m.png'
 import bg_2Img from '../assets/images/bg_2.png'
 import bg_3Img from '../assets/images/bg_3.png'
 import dataTableImg from '../assets/images/dataTable.png'
+import dataTable_thImg from '../assets/images/dataTable_th.png'
 import dataTable_mImg from '../assets/images/dataTable_m.png'
+import dataTable_m_thImg from '../assets/images/dataTable_m_th.png'
 import bg1Img from '../assets/images/bg-1.png'
 import menuIcon from '../assets/images/menu_icon.png'
 import home_img from '../assets/images/home_img.png'
@@ -326,8 +328,8 @@ const HomePage = () => {
             <div className='section s3 form-bg'>
               <div className='w-full md:h-screen flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem] md:pb-[152rem]'>
                 <div className='title text-[40rem] font-bold'>{t('s3.t1')}</div>
-                <img className='hidden md:block w-full mt-[90rem]' src={dataTableImg} alt='' />
-                <img className='block md:hidden w-[622rem] mt-[48rem]' src={dataTable_mImg} alt='' />
+                <img className='hidden md:block w-full mt-[90rem]' src={i18n.language === 'th' ? dataTable_thImg : dataTableImg} alt='' />
+                <img className='block md:hidden w-[622rem] mt-[48rem]' src={i18n.language === 'th' ? dataTable_m_thImg : dataTable_mImg} alt='' />
               </div>
             </div>
 

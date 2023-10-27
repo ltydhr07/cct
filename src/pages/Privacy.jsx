@@ -41,7 +41,7 @@ const HomePage = () => {
   useEffect(() => {
     window.addEventListener('resize', resize)
     resize()
-    i18n.changeLanguage('en')
+    i18n.changeLanguage('th')
   }, [])
 
   return (
