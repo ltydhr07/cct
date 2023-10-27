@@ -61,6 +61,7 @@ const HomePage = () => {
         if(xhr.status === 200) {
           const res = JSON.parse(xhr.response)
           if(res.status === 1) {
+            if(fbq) fbq('track', 'SubmitHomeForm', val);
             setOpenModal(true)
           }
         } else {
