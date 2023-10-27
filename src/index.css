@@ -35,8 +35,14 @@ code {
   font-size: 26rem !important;
 }
 
-.ant-form-item-label label {
-  color: #222222 !important;
+.ant-form.ant-form-vertical .ant-form-item-label {
+  padding-bottom: 8rem;
+}
+.ant-form-item .ant-form-item-label label {
+  color: #222222;
+  font-size: 24rem;
+  height: 32rem;
+  @apply md:text-[14rem];
 }
 
 .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional):before {
@@ -59,12 +65,13 @@ code {
   background: transparent !important;
   border: 2px solid rgba(34, 35, 40, 0.1);
   color: #989898 !important;
+  font-size: 20rem;
   outline: none !important;
-  @apply h-[66rem] md:h-[50rem];
+  @apply h-[66rem] md:h-[50rem] md:text-[14rem];
 }
 
-.ant-form-item {
-  margin-bottom: 24rem !important;
+.ant-form .ant-form-item {
+  margin-bottom: 24rem;
 }
 
 .ant-form-item .ant-input:hover {
@@ -79,6 +86,15 @@ code {
   background: transparent;
   border-color: rgba(34, 35, 40, 0.3);
   box-shadow: none !important;
+}
+.ant-form-item .ant-form-item-control-input {
+  min-height: 32rem;
+}
+.ant-form .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+.ant-form-vertical {
+  margin: auto 0;
 }
 
 /*隐藏滚动条*/

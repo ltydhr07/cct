@@ -134,7 +134,7 @@ const HomePage = () => {
           <ReactFullpage.Wrapper>
             <div className='section s1'>
               <div className='flex justify-center w-full h-[88rem] bg-[#16243F]'>
-                <div className='reactive flex items-center w-full max-w-[1400rem] h-full px-[24rem] py-[8rem] md:p-0'>
+                <div className='reactive flex items-center w-full max-w-[1500rem] h-full px-[24rem] py-[8rem] md:p-0'>
                   <img id='logo' onClick={() => handelMenu(fullpageApi, 0)} className='w-[226rem]' src={logoImg} />
                   <div className='ml-[33rem] md:ml-[100rem] font-bold text-white leading-none'>
                     <div className='text-[22rem] md:text-[18rem]'>{t('s1.callMsg')}</div>
@@ -213,7 +213,7 @@ const HomePage = () => {
                 <img className='hidden md:block w-full h-full object-fill' src={bannerBgImg} alt='' />
                 <img className='block md:hidden w-full h-full object-fill' src={bannerBgMImg} alt='' />
                 <div className='flex justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-60'>
-                  <div className='flex flex-col justify-center w-full max-w-[1400rem] h-full px-[92rem] md:px-[0]'>
+                  <div className='flex flex-col justify-center w-full max-w-[1500rem] h-full px-[92rem] md:px-[0]'>
                     <div className='w-full max-w-[950px] text-[50rem] text-white leading-tight'>{t('s1.p1')}</div>
                     <div className='w-full max-w-[950px] mt-[48rem] text-[36rem] md:text-[34rem] text-white leading-tight'>
                       {t('s1.p2')} <span className='text-[#22CF68]'>{t('s1.p21')}</span>
@@ -226,14 +226,14 @@ const HomePage = () => {
             </div>
             <div className='section s21 form-bg'>
               <div className='w-full md:h-screen flex flex-col items-center justify-center'>
-                <div className='flex flex-col items-center justify-center w-full max-w-[1400rem] text-[#222222] md:px-0 md:py-[0rem] py-[54rem] px-[68rem]'>
+                <div className='flex flex-col items-center justify-center w-full max-w-[1500rem] text-[#222222] md:px-0 md:py-[0rem] py-[54rem] px-[68rem]'>
                   <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
-                  <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[16rem] font-bold'>{t('s2.t2')}</div>
-                  <div className='grid grid-cols-4 gap-[20rem] w-full mt-[38rem] md:mt-[36rem]'>
+                  <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[32rem] xl:mt-[16rem] font-bold'>{t('s2.t2')}</div>
+                  <div className='grid grid-cols-4 gap-[20rem] w-full mt-[38rem] md:mt-[56rem] xl:mt-[36rem]'>
                     <img className='col-span-4 md:col-span-3 w-full h-full object-fill' src={bg_2Img} alt='' />
-                    <div className='col-span-4 md:col-span-1 bg-white'>
-                      <div className='head flex items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[28rem] text-white font-bold'>{t('s2.t3')}</div>
-                      <div className='content flex flex-col w-full px-[22rem] py-[24rem]'>
+                    <div className='col-span-4 md:col-span-1 bg-white flex flex-col'>
+                      <div className='head flex flex-shrink-0 flex-grow-0 items-center justify-center w-full h-[100rem] bg-[#22cf68] text-[28rem] text-white font-bold'>{t('s2.t3')}</div>
+                      <div className='content flex flex-col justify-center w-full h-full px-[22rem] py-[24rem]'>
                         <Form className='w-full' requiredMark={false} name='basic' layout={isPc ? 'vertical' : 'horizontal'} initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete='off'>
                           <Form.Item label={t('s2.l1')} name='name' rules={[{ required: true, message: 'Please input!' }]}>
                             <Input placeholder={t('s2.p1')} />
@@ -260,13 +260,13 @@ const HomePage = () => {
                         </Form>
                       </div>
                     </div>
-                    <div className='col-span-4 flex flex-col md:flex-row items-center w-full py-[24rem] px-[32rem] md:pr-0 bg-[#F3FFF8]'>
-                      <div className="w-full md:w-[230rem] md:mr-[48rem] flex-shrink-0 flex-grow-0 font-bold leading-none md:leading-tight text-[#22CF68] text-[28rem] md:text-[30rem]">{t('s2.lit')}</div>
-                      <ul className='w-full text-[#22CF68] list-disc text-[20rem] md:text-[16rem] leading-none mb-0 mt-[24rem] md:mt-0 pl-[24rem] md:pl-0'>
+                    <div className='col-span-4 flex flex-col xl:flex-row items-center w-full py-[32rem] xl:py-[24rem] px-[32rem] bg-[#F3FFF8]'>
+                      <div className="xl:w-[230rem] xl:mr-[48rem] flex-shrink-0 flex-grow-0 font-bold leading-none xl:leading-tight text-[#22CF68] text-[28rem] md:text-[32rem] xl:text-[30rem]">{t('s2.lit')}</div>
+                      <ul className='text-[#22CF68] list-disc text-[20rem] xl:text-[16rem] leading-none mb-0 mt-[24rem] md:mt-[30rem] xl:mt-0 pl-[24rem] xl:pl-0'>
                         <li><div className="text-[#888888]">{t('s2.li1')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s2.li2')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s2.li3')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s2.li4')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s2.li2')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s2.li3')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s2.li4')}</div></li>
                       </ul>
                     </div>
                   </div>
@@ -275,22 +275,22 @@ const HomePage = () => {
             </div>
             <div className='section s21 bg-white'>
               <div className='w-full md:h-screen flex flex-col items-center justify-center py-[70rem] md:py-0'>
-                <div className='flex flex-col items-center justify-center w-full max-w-[1400rem] text-[#222222] md:p-0 px-[68rem]'>
+                <div className='flex flex-col items-center justify-center w-full max-w-[1500rem] text-[#222222] md:p-0 px-[68rem]'>
                   <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
-                  <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[16rem] font-bold'>{t('s2.t21')}</div>
-                  <div className='text-[16rem] text-[#888888] font-bold mt-[42rem] md:mt-[24rem]'>
+                  <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[32rem] xl:mt-[16rem] font-bold'>{t('s2.t21')}</div>
+                  <div className='text-[16rem] text-[#888888] font-bold mt-[42rem] xl:mt-[24rem]'>
                     <div>{t('s21.p1')}</div>
                     <div>{t('s21.p2')}</div>
                   </div>
-                  <img className='w-full md:h-[50vh] mt-[36rem] md:mt-[24rem]' src={bg_3Img} alt='' />
+                  <img className='w-full md:h-[50vh] mt-[36rem] md:mt-[48rem] xl:mt-[24rem]' src={bg_3Img} alt='' />
                   <div className='flex flex-col items-center w-full justify-center py-[28rem] px-[30rem] bg-[#F3FFF8]'>
                     <div>
                       <div className='w-full text-[#22CF68] font-bold text-[26rem] md:text-[32rem] leading-none'>{t('s21.lit')}</div>
-                      <ul className='w-full mt-[30rem] md:mt-[20rem] mb-0 pl-[24rem] md:pl-[40rem] text-[#22CF68] list-disc leading-none text-[20rem] md:text-[16rem]'>
+                      <ul className='w-full mt-[24rem] md:mt-[30rem] xl:mt-[20rem] mb-0 pl-[24rem] md:pl-[40rem] text-[#22CF68] list-disc leading-none text-[20rem] md:text-[16rem]'>
                         <li><div className="text-[#888888]">{t('s21.li1')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s21.li2')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s21.li3')}</div></li>
-                        <li className='mt-[16rem] md:mt-[12rem]'><div className="text-[#888888]">{t('s21.li4')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s21.li2')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s21.li3')}</div></li>
+                        <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s21.li4')}</div></li>
                       </ul>
                     </div>
                   </div>
@@ -301,12 +301,12 @@ const HomePage = () => {
             <div className='section s3 form-bg'>
               <div className='w-full md:h-screen flex flex-col items-center justify-center py-[70rem] md:py-0'>
                 <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
-                <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[16rem] font-bold'>{t('s22.t1')}</div>
+                <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[32rem] xl:mt-[16rem] font-bold'>{t('s22.t1')}</div>
                 
-                <div className='w-full px-[50rem] md:p-0 relative mt-[24rem]'>
-                  <img className='hidden md:block w-[1040rem] ml-[40%]' src={bg_grid1} alt='' />
-                  <img className='w-full md:w-[1200rem] md:absolute top-[50rem] left-[300rem]' src={bg_4Img} alt='' />
-                  <div className='absolute flex items-center justify-center h-[65rem] md:h-[150rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white inset-y-0 my-auto md:top-[32%] md:inset-y-auto right-[84rem] md:right-[13%] px-[30rem]'>{t('comingSoon')}</div>
+                <div className='w-full px-[50rem] md:p-0 relative mt-[24rem] md:mt-[48rem] xl:mt-[24rem]'>
+                  <img className='hidden md:block md:w-[1200rem] xl:w-[1040rem] ml-[40%]' src={bg_grid1} alt='' />
+                  <img className='w-full md:w-[1300rem] xl:w-[1200rem] md:absolute top-[50rem] left-[300rem]' src={bg_4Img} alt='' />
+                  <div className='absolute inset-y-0 my-auto md:top-[32%] md:inset-y-auto right-[84rem] md:right-[10%] xl:right-[13%] px-[30rem] flex items-center justify-center h-[65rem] md:h-[150rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white'>{t('comingSoon')}</div>
                 </div>
               </div>
             </div>
@@ -314,9 +314,9 @@ const HomePage = () => {
             <div className='section s3 '>
               <div className='w-full md:h-screen flex flex-col items-center justify-center py-[70rem] md:py-0'>
                 <div className='title text-[20rem] md:text-[24rem] leading-none font-bold uppercase'>{t('s2.t1')}</div>
-                <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[16rem] font-bold'>{t('s22.t2')}</div>
+                <div className='title text-[30rem] md:text-[36rem] leading-none mt-[22rem] md:mt-[32rem] xl:mt-[16rem] font-bold'>{t('s22.t2')}</div>
 
-                <div className='w-full px-[50rem] md:p-0 relative mb-[100rem] mt-[24rem]'>
+                <div className='w-full px-[50rem] md:p-0 relative mb-[100rem] mt-[24rem] md:mt-[48rem] xl:mt-[24rem]'>
                   <img className='hidden md:block w-[1040rem] max-h-[70vh] ml-[20%]' src={bg_grid2} alt='' />
                   <img className='w-full md:w-[1050rem] md:absolute top-[60rem] left-[575rem]' src={bg_5Img} alt='' />
                   <div className='absolute inset-y-0 my-auto md:top-[32%] md:bottom-[auto] left-[50rem] md:left-[13%] flex items-center justify-center w-[166rem] md:w-[auto] text-center h-[139rem] md:h-[150rem] px-[30rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white'>{t('comingSoon')}</div>
@@ -324,7 +324,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className='section s3 form-bg'>
-              <div className='w-full flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem] md:pb-[152rem]'>
+              <div className='w-full md:h-screen flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem] md:pb-[152rem]'>
                 <div className='title text-[40rem] font-bold'>{t('s3.t1')}</div>
                 <img className='hidden md:block w-full mt-[90rem]' src={dataTableImg} alt='' />
                 <img className='block md:hidden w-[622rem] mt-[48rem]' src={dataTable_mImg} alt='' />
@@ -353,7 +353,7 @@ const HomePage = () => {
                 <img className='hidden md:block w-full h-full object-fill' src={bannerBg1Img} alt='' />
                 <img className='block md:hidden w-full h-full object-fill' src={bannerBgM1Img} alt='' />
                 <div className='flex justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-60'>
-                  <div className='flex flex-col justify-start md:justify-center w-full max-w-[1400rem] h-full py-[220rem] p-[112rem] md:p-0'>
+                  <div className='flex flex-col justify-start md:justify-center w-full max-w-[1500rem] h-full py-[220rem] p-[112rem] md:p-0'>
                     <div className='w-full max-w-[950rem] text-[60rem] md:text-[69rem] text-white'>{t('s6.t1')}</div>
                     <div className='w-full max-w-[950rem] mt-[43rem] text-[24rem] text-white'>{t('s6.p1')}</div>
                     <div className='w-full max-w-[950rem] text-[24rem] text-white'>{t('s6.p2')}</div>
@@ -363,7 +363,7 @@ const HomePage = () => {
             </div>
             <div className='section s7 bg-[#16243F]'>
               <div className='w-full flex flex-col items-center justify-center p-[50rem]'>
-                <div className='flex flex-col w-full max-w-[1400rem]'>
+                <div className='flex flex-col w-full max-w-[1500rem]'>
                   <div className='text-white text-[48rem] md:text-[40rem]'>{t('foot.t1')}</div>
                   <div className='flex justify-between mt-[32rem] md:mt-[24rem]'>
                     <div className='flex flex-row-reverse w-full text-[#8c8f94] font-bold'>
