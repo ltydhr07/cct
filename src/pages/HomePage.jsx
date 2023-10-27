@@ -107,7 +107,7 @@ const HomePage = () => {
     //     return
     //   }
     // }
-    i18n.changeLanguage('en')
+    i18n.changeLanguage('th')
   }, [])
 
   const [showMenu, setShowMenu] = useState(false)
