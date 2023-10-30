@@ -144,7 +144,7 @@ const HomePage = () => {
                 <div className='reactive flex items-center w-full max-w-[1500rem] h-full px-[24rem] py-[8rem] md:p-0'>
                   <img id='logo' onClick={() => handelMenu(fullpageApi, 0)} className='w-[226rem]' src={logoImg} />
                   <div className='ml-[33rem] md:ml-[100rem] font-bold text-white leading-none'>
-                    <div className='text-[22rem] md:text-[18rem]'>{t('s1.callMsg')}</div>
+                    <div className='text-[20rem] md:text-[18rem]'>{t('s1.callMsg')}</div>
                     <div className='flex items-center mt-[6rem] md:mt-[8rem] text-[24rem] md:text-[18rem]'>
                       <img className='w-[21rem] md:w-[17rem] mr-[12rem]' src={phoneWhiteIcon} alt="" />
                       {t('phone')}
