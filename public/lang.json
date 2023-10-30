@@ -12,12 +12,13 @@
         "Home": "Home",
         "Service": "Service",
         "Promotion": "Promotion",
+        "Pricing": "Pricing",
         "Contact Us": "Contact Us",
         "callMsg": "Call now for free survey",
-        "p1": "Free electricity today! Solar reduces electricity costs by 10,000-1 million, payback in 3 years, 70% annual profit. Special offer: Free installation for electricity bills over 100,000/month. 5-year contract.",
-        "p2": "Solar rooftop for factories, hospitals, office buildings, townhomes, and row houses.",
-        "p21": "Showroom, schools",
-        "p3": "Manee Power provides comprehensive solar solutions, including sales, design, and installation of solar systems. We offer accurate assessments, fast installations, professional service, and affordable prices. We believe everyone can generate their own electricity and create sustainable profits."
+        "p1": "Install a solar rooftop today and reduce your electricity bill by 10,000 - 1,000,000 baht. Homeowners and business owners can reduce their electricity costs by as much as 70% and get a quick payback within 3 years.",
+        "p2": "",
+        "p21": "Solar rooftop for entrepreneurs in industrial plants, hospitals, schools, home offices.",
+        "p3": "CapSolar is a provider of complete solar solutions, from design, installation, simulation of electricity production (simulation), fast installation from an experienced team. and has certification standards We believe that everyone has the potential to produce electricity from solar rooftops from their own area and create sustainable profits."
       },
       "s2": {
         "t1": "Our Services",
@@ -29,8 +30,8 @@
         "l1": "Name",
         "l2": "Phone",
         "l3": "Home Address",
-        "p1": "Press Enter",
-        "p2": "Please input!",
+        "p1": " ",
+        "p2": "Please input",
         "tip1": "Thank you for your submission.",
         "lit": "Why CapSolar is right for Home Owner?",
         "li1": "World Class Solar System CapSolar offers tier 1 solar panels and leading inverter brands (Huawei, Sungrow, Solar edge, SMA, Growatt).",
@@ -53,15 +54,16 @@
       },
       "s3": {
         "t1": "Home Owners Solution Pricing",
-        "t2": "Promotion",
-        "t3": "Order now, and get CapFlex Package",
-        "p1": "Only 50% upfront payment and up to 12 months installment",
-        "Contact": "Contact"
+        "t2": "CapSolar Launch Promotion",
+        "p1": "Take advantage Now. Solar rooftop price is the lowest in 5 years in Thailand.",
+        "p2": "Install solar rooftop at your home today, and lower electric costs up to 50%.",
+        "p3": "Return on investments in 3 years.",
+        "Contact": "Contact us now for free survey"
       },
       "s6": {
-        "t1": "Cap Solar",
-        "p1": "CapSolar is a total renewable energy solutions company that focuses on solar rooftop and floating solar systems for residential, commercial, and industrial segments. We provide survey, design, installation, and maintenance services for solar rooftop systems.",
-        "p2": "Our main goal is to make solar rooftop accessible to all customers, offering a range of products and services to meet different needs and budgets."
+        "t1": "CapSolar",
+        "p1": "CapSolar is a solar service provider.",
+        "p2": "Integrated rooftop From surveying, designing, installing and maintaining the system, and after-sales service throughout its lifespan. Company's goals is to reach customers with various needs. Providing excellent after-sales service and product quality guaranteed throughout the lifespan certified by the manufacturer."
       },
       "foot": {
         "t1": "Contact Us",
@@ -88,25 +90,26 @@
         "Home": "หน้าหลัก",
         "Service": "บริการ",
         "Promotion": "โปรโมชั่น",
+        "Pricing": "ราคา",
         "Contact Us": "ติดต่อเรา",
         "callMsg": "โทรเลยสำหรับการสำรวจฟรี",
-        "p1": "ไฟฟ้าฟรีวันนี้! พลังงานแสงอาทิตย์ลดค่าไฟฟ้า 10,000-1 ล้านบาท กำไรรายปี 70% คืนทุนใน 3 ปี ข้อเสนอพิเศษ: ติดตั้งฟรีสำหรับบิลไฟฟ้าเกิน 100,000 บาท/เดือน สัญญา 5 ปี",
-        "p2": "หลังคาโซล่าเพื่อโรงงาน โรงพยาบาล อาคารสำนักงาน ทาวน์โฮม และแถวบ้าน",
-        "p21": "โชว์รูม โรงเรียน",
-        "p3": "แมนีพาวเวอร์ให้บริการโซลาร์โซลูชันอย่างครบวงจร รวมถึงการขาย การออกแบบ และการติดตั้งระบบโซลาร์ เรามีการประเมินที่แม่นยำ การติดตั้งที่รวดเร็ว บริการมืออาชีพ และราคาที่เหมาะสม เราเชื่อว่าทุกคนสามารถผลิตไฟฟ้าของตนเองและสร้างกำไรที่ยั่งยืนได้"
+        "p1": "ติดตั้ง โซล่าร์ รูฟท็อป วันนี้ลดค่าไฟฟ้าได้ 10,000 – 1,000,000 บาท เจ้าของบ้าน และเจ้าของกิจการสามารถลดต้นทุนค่าไฟฟ้าได้มากสุดถึง 70% และคืนทุนเร็วภายใน 3 ปี",
+        "p2": "",
+        "p21": "โซล่าร์ รูฟท็อป สำหรับผู้ประกอบการในกลุ่มโรงงานอุตสาหกรรม โรงพยาบาล โรงเรียน โฮมออฟฟิศ",
+        "p3": "แค็ป โซล่าร์ เป็นผุ้ให้บริการโซล่าร์ โซลูชั่นส์ แบบครบวงจร ตั้งแต่การออกแบบ การติดตั้ง การจำลองการผลิตไฟฟ้า (simulation) การติดตั้งที่รวดเร็วจากทีมงานที่มีประสบการณ์ และมีมาตรฐานการรับรอง เราเชื่อว่าทุกคนมีศักยภาพในการผลิตไฟฟ้าจาก โซล่าร์ รูฟท็อป ได้จากพื้นที่ของตนเองและสร้างกำไรที่ยั่งยืนได้"
       },
       "s2": {
         "t1": "บริการของเรา",
-        "t2": "หลังคาสำหรับเจ้าของบ้าน",
+        "t2": "โซล่าร์ รูฟท็อป โซ่ลูชั่นส์ สำหรับเจ้าของบ้าน",
         "st2": "เจ้าของบ้าน",
         "st21": "เจ้าของธุรกิจ",
-        "t21": "หลังคาสำหรับเจ้าของธุรกิจ",
+        "t21": "โซล่าร์ รูฟท็อป โซลูชั่น สำหรับผู้ประกอบการ",
         "t3": "ฝากข้อความของคุณ",
         "l1": "ชื่อ",
         "l2": "โทรศัพท์",
         "l3": "ที่อยู่บ้าน",
-        "p1": "กด Enter",
-        "p2": "กรุณากรอก!",
+        "p1": " ",
+        "p2": "กรุณากรอก",
         "tip1": "ขอบคุณสำหรับการส่ง",
         "lit": "ทำไม CapSolar เหมาะกับเจ้าของบ้าน?",
         "li1": "ระบบโซลาร์ระดับโลก CapSolar ให้แผงโซลาร์ชั้นนำและแบรนด์อินเวอร์เตอร์ชั้นนำ (Huawei, Sungrow, Solar edge, SMA, Growatt)",
@@ -115,8 +118,8 @@
         "li4": "ทีมติดตั้งที่มีประสบการณ์ CapSolar มีวิศวกรและบุคลากรที่ได้รับใบรับรองและมีประสบการณ์การติดตั้งหลังคาโซลาร์หลายปี"
       },
       "s21": {
-        "p1": "หลังคาโซลาร์สำหรับเจ้าของธุรกิจเหมาะสำหรับธุรกิจทุกประเภทที่มีบิลไฟฟ้าเกิน 100,000 บาทต่อเดือน",
-        "p2": "ธุรกิจในโรงงาน โรงแรม รีสอร์ท โรงพยาบาล โรงเรียน และอาคารสำนักงานสามารถลดค่าไฟฟ้าได้สูงสุดถึง 75%",
+        "p1": "โซล่าร์ รูฟท็อป โซลูชั่นส์ สำหรับผู้ประกอบการ เหมาะสำหรับธุรกิจทุกประเภทที่มีต้นทุนค่าไฟฟ้าเกิน 100,000 บาทต่อเดือน",
+        "p2": "ธุรกิจในโรงงานอุตสาหกรรม โรงแรม รีสอร์ท โรงพยาบาล โรงเรียน และอาคารสำนักงานสามารถลดต้นทุนจากค่าไฟฟ้าได้สูงสุดถึง 75%",
         "lit": "ทำไม CapSolar เหมาะกับเจ้าของธุรกิจ:",
         "li1": "ลดค่าไฟฟ้าตั้งแต่วันที่ติดตั้ง",
         "li2": "บริการหลังการขายที่ดีตลอดอายุการใช้งานของระบบโซลาร์",
@@ -128,16 +131,17 @@
         "t2": "โซลูชันชาร์จ EV"
       },
       "s3": {
-        "t1": "ราคาโซลูชันสำหรับเจ้าของบ้าน",
-        "t2": "โปรโมชั่น",
-        "t3": "สั่งซื้อเดี๋ยวนี้และรับแพ็คเกจ CapFlex",
-        "p1": "เงินดาวน์เพียง 50% และผ่อนชำระได้สูงสุด 12 เดือน",
-        "Contact": "ติดต่อ"
+        "t1": "ราคาโซล่าร์ รูฟท็อป โซลูชั่นส์ สำหรับเจ้าของบ้าน",
+        "t2": "โปรโมชั่นรายชื่อ CapSolar",
+        "p1": "ทำให้ดีที่สุดตอนนี้ ราคาโซลาร์รูฟต่ำที่สุดในรอบ 5 ปีของไทย",
+        "p2": "การติดตั้งโซลาร์รูฟท็อปที่บ้านตอนนี้ สามารถลดค่าไฟฟ้าได้ถึง 50%",
+        "p3": "ผลตอบแทนจากการลงทุน 3 ปี",
+        "Contact": "ติดต่อเราตอนนี้เพื่อสำรวจฟรี"
       },
       "s6": {
-        "t1": "Cap Solar",
-        "p1": "CapSolar เป็นบริษัทโซลาร์เนอร์จำนวนเต็มที่เน้นในระบบหลังคาและระบบโซลาร์ลอยน้ำสำหรับส่วนที่อยู่อาศัย ธุรกิจ และอุตสาหกรรม เราให้บริการการสำรวจ การออกแบบ การติดตั้ง และการบำรุงรักษาระบบโซลาร์หลังคา",
-        "p2": "เป้าหมายหลักของเราคือการทำให้การใช้พลังงานแสงอาทิตย์เข้าถึงได้สำหรับลูกค้าทุกคน โดยให้บริการผลิตภัณฑ์และบริการที่หลากหลายเพื่อตอบสนองความต้องการและงบประมาณที่แตกต่างกัน"
+        "t1": "CapSolar",
+        "p1": "แค็ป โซล่าร์ เป็นผู้ให้บริการโซล่าร์",
+        "p2": "รูฟท็อปแบบครบวงจร ตั้งแต่การสำรวจ ออกแบบ ติดตั้ง และงานบำรุงรักษาระบบ และการบริการหลังการขายตลอดอายุการใช้งาน เป้าหมายของบริษัทฯ คือการเข้าถึงลูกค้าที่มีความต้องการหลากหลาย การให้บริการหลังการขายที่ยอดเยี่ยม และการรับประกันคุณภาพสินค้าตลอดระยะเวลาอายุการใช้งานที่รับรองโดยโรงงานผู้ผลิต"
       },
       "foot": {
         "t1": "ติดต่อเรา",

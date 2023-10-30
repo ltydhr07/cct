@@ -15,6 +15,10 @@ import dataTableImg from '../assets/images/dataTable.png'
 import dataTable_thImg from '../assets/images/dataTable_th.png'
 import dataTable_mImg from '../assets/images/dataTable_m.png'
 import dataTable_m_thImg from '../assets/images/dataTable_m_th.png'
+import dataTable2Img from '../assets/images/dataTable2.png'
+import dataTable2_thImg from '../assets/images/dataTable2_th.png'
+import dataTable2_mImg from '../assets/images/dataTable2_m.png'
+import dataTable2_m_thImg from '../assets/images/dataTable2_m_th.png'
 import bg1Img from '../assets/images/bg-1.png'
 import menuIcon from '../assets/images/menu_icon.png'
 import home_img from '../assets/images/home_img.png'
@@ -160,19 +164,22 @@ const HomePage = () => {
                           <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
                             {t('s2.st2')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 4)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s2.st21')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 5)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s22.t1')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 4)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 6)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s22.t2')}
                           </div>
                         </div>
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 6)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Promotion')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 2)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
+                        {t('s1.Pricing')}
                       </div>
                       <div onClick={() => handelMenu(fullpageApi, 8)} className={`cursor-pointer flex items-center h-full px-[8rem] border-[#22CF68] hover:border-b-[2rem] ml-[24rem] ${menuActive === null ? 'border-b-[2rem]' : ''}`}>
                         {t('s1.Contact Us')}
@@ -191,19 +198,22 @@ const HomePage = () => {
                           <div onClick={() => handelMenu(fullpageApi, 1)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 ml-0`}>
                             {t('s2.st2')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 4)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s2.st21')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 5)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s22.t1')}
                           </div>
-                          <div onClick={() => handelMenu(fullpageApi, 4)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                          <div onClick={() => handelMenu(fullpageApi, 6)} className={`flex justify-start items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                             {t('s22.t2')}
                           </div>
                         </div>
                       </div>
-                      <div onClick={() => handelMenu(fullpageApi, 6)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                      <div onClick={() => handelMenu(fullpageApi, 3)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                         {t('s1.Promotion')}
+                      </div>
+                      <div onClick={() => handelMenu(fullpageApi, 2)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
+                        {t('s1.Pricing')}
                       </div>
                       <div onClick={() => handelMenu(fullpageApi, 8)} className={`flex justify-center items-center w-full h-[48rem] px-[12rem] bg-[#16243F] bg-opacity-80 mt-[6rem]`}>
                         {t('s1.Contact Us')}
@@ -276,6 +286,35 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
+
+            <div className='section s3 form-bg'>
+              <div className='w-full flex flex-col items-center pt-[64rem] md:pt-[70rem] pb-[50rem] md:pb-[102rem]'>
+                <div className='title w-full px-[64rem] text-center text-[40rem] font-bold'>{t('s3.t1')}</div>
+                <img className='hidden md:block w-full mt-[90rem]' src={i18n.language === 'th' ? dataTable_thImg : dataTableImg} alt='' />
+                <img className='block md:hidden w-[622rem] mt-[48rem]' src={i18n.language === 'th' ? dataTable_m_thImg : dataTable_mImg} alt='' />
+              </div>
+            </div>
+            <div className='section s3 form-bg'>
+              <div className='w-full md:h-screen flex flex-col items-center justify-center'>
+                <div className='relative flex h-full flex-col items-center w-full px-[48rem] pb-[35rem] md:p-0 mt-[27rem] md:mt-[100rem] bg-[#16243F]'>
+                  <img className='order-2 md:order-1 md:absolute -top-[100rem] left-[40rem] w-[909rem]' src={home_img} alt='' />
+                  <div className='order-1 md:order-2 w-full md:w-[855rem] pt-[72rem] flex flex-col ml-auto mr-[55rem] leading-none'>
+                    <div className='text-[40rem] md:text-[48rem] text-[#22cf68] font-bold'>{t('s3.t2')}</div>
+                    <div className='mt-[13rem] md:mt-[44rem] mb-[32rem] md:mb-[40rem] w-[74rem] md:w-[113rem] h-px bg-white'></div>
+                    <div className='mt-[15rem] md:mt-[22rem] text-[24rem] leading-none text-[#a7aab0]'>{t('s3.p1')}</div>
+                    <div className='mt-[15rem] md:mt-[22rem] text-[24rem] leading-none text-[#a7aab0]'>{t('s3.p2')}</div>
+                    <div className='mt-[15rem] md:mt-[22rem] text-[24rem] leading-none text-[#a7aab0]'>{t('s3.p3')}</div>
+                    <div onClick={() => handelMenu(fullpageApi, 1)} className='mt-[45rem] text-[24rem] text-[#22cf68] font-bold uppercase cursor-pointer'>
+                      {t('s3.Contact')}
+                      <span className='inline-block ml-[20rem] h-[28rem] text-[28rem] leading-[18rem]'>→</span>
+                    </div>
+                  </div>
+                  <img className='hidden md:block w-[1355rem] mt-[50rem] order-3' src={i18n.language === 'th' ? dataTable2_thImg : dataTable2Img} alt='' />
+                  <img className='block md:hidden w-full order-3' src={i18n.language === 'th' ? dataTable2_m_thImg : dataTable2_mImg} alt='' />
+                </div>
+              </div>
+            </div>
+
             <div className='section s21 bg-white'>
               <div className='w-full md:h-screen flex flex-col items-center justify-center py-[70rem] md:py-0'>
                 <div className='flex flex-col items-center justify-center w-full max-w-[1500rem] text-[#222222] md:p-0 px-[68rem]'>
@@ -323,31 +362,6 @@ const HomePage = () => {
                   <img className='hidden md:block w-[1040rem] max-h-[70vh] ml-[20%]' src={bg_grid2} alt='' />
                   <img className='w-full md:w-[1050rem] md:absolute top-[60rem] left-[575rem]' src={bg_5Img} alt='' />
                   <div className='absolute inset-y-0 my-auto md:top-[32%] md:bottom-[auto] left-[50rem] md:left-[13%] flex items-center justify-center w-[166rem] md:w-[auto] text-center h-[139rem] md:h-[150rem] px-[30rem] bg-[#22CF68] bg-opacity-80 text-[28rem] md:text-[48rem] font-bold text-white'>{t('comingSoon')}</div>
-                </div>
-              </div>
-            </div>
-            <div className='section s3 form-bg'>
-              <div className='w-full md:h-screen flex flex-col items-center justify-center pt-[64rem] md:pt-[90rem] pb-[50rem] md:pb-[152rem]'>
-                <div className='title text-[40rem] font-bold'>{t('s3.t1')}</div>
-                <img className='hidden md:block w-full mt-[90rem]' src={i18n.language === 'th' ? dataTable_thImg : dataTableImg} alt='' />
-                <img className='block md:hidden w-[622rem] mt-[48rem]' src={i18n.language === 'th' ? dataTable_m_thImg : dataTable_mImg} alt='' />
-              </div>
-            </div>
-
-            <div className='section s3 form-bg'>
-              <div className='w-full flex flex-col items-center justify-center'>
-                <div className='relative flex flex-col-reverse md:flex-row w-full md:h-[518rem] pl-[95rem] pr-[122rem] pb-[35rem] md:p-0 mt-[27rem] md:mt-[100rem] bg-[#16243F]'>
-                  <img className='md:absolute -top-[95rem] left-[90rem] w-[909rem]' src={home_img} alt='' />
-                  <div className='w-full md:w-[792rem] pt-[72rem] flex flex-col ml-auto leading-none'>
-                    <div className='text-[40rem] md:text-[60rem] text-[#22cf68] font-bold'>{t('s3.t2')}</div>
-                    <div className='mt-[15rem] md:mt-[22rem] text-[20rem] md:text-[30rem] text-white'>{t('s3.t3')}</div>
-                    <div className='mt-[13rem] md:mt-[20rem] mb-[32rem] md:mb-[48rem] w-[74rem] md:w-[113rem] h-px bg-white'></div>
-                    <div className='w-[283rem] md:w-[443rem] px-[8rem] py-[18rem] md:p-[24rem] bg-[#22cf68] text-[20rem] md:text-[30rem] text-white leading-tight'>{t('s3.p1')}</div>
-                    <div onClick={() => handelMenu(fullpageApi, 1)} className='mt-[28rem] text-[18rem] text-[#22cf68] font-bold uppercase cursor-pointer'>
-                      {t('s3.Contact')}
-                      <span className='inline-block ml-[20rem] h-[28rem] text-[28rem] leading-[18rem]'>→</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
