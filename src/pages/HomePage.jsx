@@ -64,6 +64,7 @@ const HomePage = () => {
           const res = JSON.parse(xhr.response)
           if(res.status === 1) {
             if(fbq) fbq('track', 'SubmitHomeForm', val);
+            if(gtag_report_conversion) gtag_report_conversion()
             setOpenModal(true)
           }
         } else {

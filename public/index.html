@@ -11,13 +11,26 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Cap Solar</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBS0S1WJPW"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11390360728"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-SBS0S1WJPW');
+    gtag('config', 'AW-11390360728');
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11390360728/zeD4CNys_PEYEJi5rLcq',
+        'event_callback': callback
+      });
+      return false;
+    }
   </script>
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -36,7 +49,8 @@
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1536926793734125&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=1536926793734125&ev=PageView&noscript=1" />
+  </noscript>
 </head>
 
 <body>
