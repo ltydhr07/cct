@@ -19,7 +19,7 @@ requestJSON('/lang.json', res => {
     // 配置参数的文档: https://www.i18next.com/overview/configuration-options
     .init({
       debug: true,
-      fallbackLng: 'en',
+      fallbackLng: 'th',
       interpolation: {
         escapeValue: false,
       },
