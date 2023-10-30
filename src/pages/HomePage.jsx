@@ -264,7 +264,7 @@ const HomePage = () => {
                     </div>
                     <div className='col-span-4 flex flex-col xl:flex-row items-center w-full py-[32rem] xl:py-[24rem] px-[32rem] bg-[#F3FFF8]'>
                       <div className="xl:w-[230rem] xl:mr-[48rem] flex-shrink-0 flex-grow-0 font-bold leading-none xl:leading-tight text-[#22CF68] text-[28rem] md:text-[32rem] xl:text-[30rem]">{t('s2.lit')}</div>
-                      <ul className='text-[#22CF68] list-disc text-[20rem] xl:text-[16rem] leading-none mb-0 mt-[24rem] md:mt-[30rem] xl:mt-0 pl-[24rem] xl:pl-0'>
+                      <ul className='text-[#22CF68] list-disc text-[20rem] md:text-[16rem] leading-none mb-0 mt-[24rem] md:mt-[30rem] xl:mt-0 pl-[24rem] xl:pl-0'>
                         <li><div className="text-[#888888]">{t('s2.li1')}</div></li>
                         <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s2.li2')}</div></li>
                         <li className='mt-[16rem] md:mt-[18rem] xl:mt-[12rem]'><div className="text-[#888888]">{t('s2.li3')}</div></li>
