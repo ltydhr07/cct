@@ -79,7 +79,7 @@ const HomePage = () => {
         }
       }
     }
-    xhr.send(JSON.stringify(val))
+    xhr.send(JSON.stringify(params))
   }
 
   const onFinishFailed = errorInfo => {
