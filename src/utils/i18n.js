@@ -12,7 +12,7 @@ function requestJSON(url, callback) {
   xhr.send()
 }
 
-requestJSON('/lang.json', res => {
+requestJSON('/lang.json?1', res => {
   i18n
     .use(initReactI18next)
     // 初始化 i18next
