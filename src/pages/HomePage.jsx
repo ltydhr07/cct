@@ -67,8 +67,8 @@ const HomePage = () => {
     if(location.href.indexOf('utm_source=google') !== -1) params.source = 'google'
     if(location.href.indexOf('from=fb') !== -1) params.source = 'fb'
     var xhr = new XMLHttpRequest()
-    // xhr.open('POST', 'https://www.capsolar.homes/gf/formInfo/createHomeForm', true)
-    xhr.open('POST', 'http://liutianyuan.natapp1.cc/gf/formInfo/createHomeForm', true)
+    xhr.open('POST', 'https://www.capsolar.homes/gf/formInfo/createHomeForm', true)
+    // xhr.open('POST', 'http://liutianyuan.natapp1.cc/gf/formInfo/createHomeForm', true)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
       console.log(xhr,xhr.readyState, xhr.status)
