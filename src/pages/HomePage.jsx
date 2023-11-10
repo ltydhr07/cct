@@ -55,9 +55,16 @@ const HomePage = () => {
   
   const handleOk = () => {
     setOpenModal(false)
+    setIsFinish(false)
   }
+  const [finishing, setIsFinish] = useState(false)
 
   const onFinish = val => {
+    if(finishing) return
+    setIsFinish(true)
+    setTimeout(() => {
+      setIsFinish(false)
+    }, 3000)
     const params = { ...val }
     params.info = location.search.slice(1)
     if(location.href.indexOf('utm_source=google') !== -1) params.source = 'google'
@@ -74,7 +81,7 @@ const HomePage = () => {
             if(fbq) fbq('track', 'SubmitHomeForm', val);
             if(gtag_report_conversion) gtag_report_conversion()
             setOpenModal(true)
-          }
+        }
         } else {
           
         }
@@ -262,8 +269,8 @@ const HomePage = () => {
                             <Input placeholder={t('s2.p1')} />
                           </Form.Item>
                           <Form.Item>
-                            <Button className='big-btn w-full' type='primary' htmlType='submit'>
-                              {t('submit')}
+                            <Button className='big-btn w-full' type='primary' disabled={finishing} htmlType='submit'>
+                              {finishing ? t('Submitting') : t('submit')}
                             </Button>
                             <Modal width='unset' wrapClassName='tips-dialog' centered visible={openModal} footer={null} onCancel={handleOk}>
                               <div className='flex flex-col items-center py-[55rem]'>

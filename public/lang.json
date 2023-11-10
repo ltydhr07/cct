@@ -8,6 +8,7 @@
       "comingSoon": "COMING SOON",
       "submit": "SUBMIT",
       "ok": "OK",
+      "Submitting": "Submitting...",
       "s1": {
         "Home": "Home",
         "Service": "Service",
@@ -86,6 +87,7 @@
       "comingSoon": "เร็วๆ นี้จะเปิดให้บริการ",
       "submit": "ส่ง",
       "ok": "ตกลง",
+      "Submitting": "กำลังส่ง...",
       "s1": {
         "Home": "หน้าหลัก",
         "Service": "บริการ",
