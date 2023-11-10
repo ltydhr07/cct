@@ -62,15 +62,13 @@ const HomePage = () => {
   const onFinish = val => {
     if(finishing) return
     setIsFinish(true)
-    setTimeout(() => {
-      setIsFinish(false)
-    }, 3000)
     const params = { ...val }
     params.info = location.search.slice(1)
     if(location.href.indexOf('utm_source=google') !== -1) params.source = 'google'
     if(location.href.indexOf('from=fb') !== -1) params.source = 'fb'
     var xhr = new XMLHttpRequest()
-    xhr.open('POST', 'https://www.capsolar.homes/gf/formInfo/createHomeForm', true)
+    // xhr.open('POST', 'https://www.capsolar.homes/gf/formInfo/createHomeForm', true)
+    xhr.open('POST', 'http://liutianyuan.natapp1.cc/gf/formInfo/createHomeForm', true)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
       console.log(xhr,xhr.readyState, xhr.status)
@@ -275,7 +273,7 @@ const HomePage = () => {
                             <Modal width='unset' wrapClassName='tips-dialog' centered visible={openModal} footer={null} onCancel={handleOk}>
                               <div className='flex flex-col items-center py-[55rem]'>
                                 <div className='text-center text-[#898989] text-[26rem]'>{t('s2.tip1')}</div>
-                                <Button onClick={() => setOpenModal(false)} className='big-btn w-[200rem] mt-[60rem]' type='primary'>
+                                <Button onClick={() => handleOk()} className='big-btn w-[200rem] mt-[60rem]' type='primary'>
                                   {t('ok')}
                                 </Button>
                               </div>
