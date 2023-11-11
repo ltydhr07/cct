@@ -63,7 +63,7 @@ const HomePage = () => {
     if(finishing) return
     setIsFinish(true)
     const params = { ...val }
-    params.info = location.search.slice(1)
+    params.info = location.search.split('?').slice(1)
     if(location.href.indexOf('utm_source=google') !== -1) params.source = 'google'
     if(location.href.indexOf('from=fb') !== -1) params.source = 'fb'
     var xhr = new XMLHttpRequest()
